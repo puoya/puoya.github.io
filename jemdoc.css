@@ -5,7 +5,7 @@ table#tlayout {
     border-collapse: collapse;
     background: white;
     margin-left: 0.0em;
-	margin-top: -100px;
+	margin-top: 0.0em;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 	padding-bottom: 0px;
 	margin: 0em;
 	margin-left: 0.0em;
-	margin-top: 0.0em;
+	margin-top: -20em;
 	border: none;
 }
 
