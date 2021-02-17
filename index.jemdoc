@@ -1,4 +1,5 @@
 # jemdoc: menu{MENU}{index.html}
+{{<div style = "position:absolute; top:20px;}}
 == Puoya Tabaghi
 
 ~~~
@@ -31,5 +32,3 @@ Email: [tabaghi2@illinois.edu]  \n
 -- BS in Electrical Engineering, Communications
 -- BS in Electrical Engineering, Electronics
 -- Advisor: Hamid Sheikhzadeh
-
-{{<div style = "position:absolute; left:80px; top:20px;}}
