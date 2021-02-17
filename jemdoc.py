@@ -1185,7 +1185,7 @@ def procfile(f):
   showlastupdated = True
   showlastupdatedtime = True
   nodefaultcss = False
-  fwtitle = False
+  fwtitle = True
   css = []
   js = []
   title = None
