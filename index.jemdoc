@@ -1,4 +1,16 @@
-# jemdoc: menu{MENU}{index.html} 
+# jemdoc: menu{MENU}{index.html}
+{title {
+    visibility: hidden;
+    position: relative;
+}
+title:after {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "New title";
+}
+} 
 ~~~
 {}{img_left}{chao.jpeg}{alt text}{244.8px}{326.4px}{}
 {{<font2 style="font-family: Brush Script MT, Cursive, Fantasy, Georgia">}} {{<font style="font-size: 50px">}} *Puoya Tabaghi* {{</font>}} {{</font2>}} \n

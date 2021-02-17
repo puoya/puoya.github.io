@@ -143,7 +143,8 @@ def standardconf():
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
   
   [windowtitle]
-
+  # used in header for window title.
+  <title>|</title>
 
   [fwtitlestart]
   <div id="fwtitle">
