@@ -1,0 +1,25 @@
+# jemdoc: menu{MENU}{publication.html}
+= Publications 
+[https://scholar.google.com/citations?user=iH0-74kAAAAJ&hl=en&oi=ao \[Google Scholar\]]
+- 2021
+-- [https://arxiv.org/abs/2006.09858 *Geometry of Comparisons*] \n 
+Puoya Tabaghi and Ivan Dokmanic. /In preparation for Conference on Neural Information Processing Systems (NeurIPS)./ \n
+-- [https://arxiv.org/abs/2102.03723 *On Procrustes Analysis in Hyperbolic Space*] \n 
+Puoya Tabaghi and Ivan Dokmanic. /Submitted to IEEE Signal Processing Letters./ \n
+-- [https://arxiv.org/abs/2102.03723 *Linear Classifiers in Mixed Constant Curvature Spaces*] \n 
+Puoya Tabaghi, Eli Chien, Chao Pan, and Olgica Milenkovic. /Submitted to International Conference on Machine Learning (ICML)./ \n
+- 2020
+-- [https://dl.acm.org/doi/abs/10.1145/3394486.3403224 *Hyperbolic Distance Matrices*] \n 
+Puoya Tabaghi and Ivan Dokmanic. /Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining./ \n
+- 2019
+-- [https://ieeexplore.ieee.org/abstract/document/8930980 *Kinetic Euclidean Distance Matrices*] \n 
+Puoya Tabaghi, Ivan Dokmanic, and Martin Vetterli. /IEEE Transactions on Signal Processing, vol. 68, pp. 452-465./ \n
+-- [https://ieeexplore.ieee.org/abstract/document/8682653 *On the Move: Localization with Kinetic Euclidean Distance Matrices*] \n 
+Puoya Tabaghi, Ivan Dokmanic, and Martin Vetterli. /IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)./ \n
+-- [https://arxiv.org/abs/1901.10076 *Learning Schatten--von Neumann Operators*] \n 
+Puoya Tabaghi, Maarten V. de Hoop, and Ivan Dokmanic. /arXiv preprint: 1901.10076./ \n
+-- [https://arxiv.org/abs/1903.04085 *Real Polynomial Gram Matrices Without Real Spectral Factors*] \n 
+Puoya Tabaghi and Ivan Dokmanic. /arXiv preprint: 1903.04085./ \n
+- 2015
+-- [https://ieeexplore.ieee.org/abstract/document/7280821?casa_token=sLgLtjEqZHUAAAAA:CJJsXTRPw9uEFvVz4NAYyRxkX14GAEDZb3BrEQ_lU1H0957NOnK1DHrvA_UXR4cAcI-nlZQQUw *Class-preserving manifold learning for detection and classification*] \n 
+Puoya Tabaghi and Mahmood R. Azimi-Sadjadi. /International Joint Conference on Neural Networks (IJCNN)./ \n
