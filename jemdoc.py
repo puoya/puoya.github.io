@@ -143,8 +143,7 @@ def standardconf():
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
   
   [windowtitle]
-  # used in header for window title.
-  <title>|</title>
+
 
   [fwtitlestart]
   <div id="fwtitle">
@@ -1185,7 +1184,7 @@ def procfile(f):
   showlastupdated = True
   showlastupdatedtime = True
   nodefaultcss = False
-  fwtitle = True
+  fwtitle = False
   css = []
   js = []
   title = None
