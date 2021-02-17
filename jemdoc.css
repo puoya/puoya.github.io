@@ -103,7 +103,7 @@ div.menu-item {
 div#toptitle {
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
-	margin-bottom: -20px;
+	margin-top: -20px;
 	border-bottom: 3px double gray;
 }
 
