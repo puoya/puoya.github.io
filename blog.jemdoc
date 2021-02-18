@@ -4,21 +4,12 @@
 = Blog
 \n
 - 2021
--- $x^T xY$
---   \(
-  f(x) = \left\{
-  \begin{array}{ll}
-  3, & x \leq 0 \\
-  5, & x > 0. \\
-  \end{array}\right.
-  \)
--- &f(x) = \left\{
-  \begin{array}{ll}
-  3, & x \leq 0 \\
-  5, & x > 0. \\
-  \end{array}\right. &
--- asdjkhj \begin{align}
-V &= -IR \label{RES-NOV}\\
-I &= -\frac{V}{R} \label{RES-NOI}
-\end{align}
+-- \(
+\begin{aligned}
+\nabla \cdot \mathbf{D} &= \rho_f\\
+\nabla \cdot \mathbf{B} &= 0\\
+\nabla \times \mathbf{E} &= -\frac{\partial\mathbf{B}}{\partial t}\\
+\nabla \times \mathbf{H} &= \mathbf{J}_f - \frac{\partial\mathbf{D}}{\partial t}.
+\end{aligned}
+\)
 -- [blog/blog1.html Blog 15]
