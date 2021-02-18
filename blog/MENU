@@ -1,14 +1,14 @@
 \n	
-	home		 				[index.html]
+	home		 				[../index.html]
 \n
-	publications        		[publication.html]
-	teaching 					[teaching.html]
-	software            		[software.html]
+	publications        				[../publication.html]
+	teaching 					[../teaching.html]
+	software            				[../software.html]
 \n
-	news						[news.html]
-    blog						[blog.html]
+	news						[../news.html]
+    	blog						[../blog.html]
 \n
-    email 						[mailto:tabaghi2@illinois.edu]
+    	email 						[mailto:tabaghi2@illinois.edu]
 
 
 
