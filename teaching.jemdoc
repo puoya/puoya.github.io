@@ -1,6 +1,8 @@
 # jemdoc: menu{MENU}{teaching.html}
+# jemdoc: menu{MENU}{publication.html}
 = Teaching
-
+\n
+= Teaching
 == Teaching assistant
 - COMP 3220 Principles of Programming Languages (Spring 2018)
 
