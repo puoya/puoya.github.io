@@ -3,8 +3,12 @@
 \n
 = Blog
 \n
-- 2021
-
+== Reproducing Kernel Hilbert Space
+Let us begin with the definition of /Hilbert spaces/.
+~~~
+{*Definition*}
+A Hilbert Space is an /inner product space/ that is /complete/ and /separable/ with respect to the norm defined by the inner product.
+~~~
 \(
 \begin{aligned}
 \nabla \cdot \mathbf{D} &= \rho_f\\
