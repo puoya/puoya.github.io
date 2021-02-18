@@ -5,3 +5,13 @@
 \n
 - 2021
 -- [blog1.html Blog 1]
+
+{{
+<script src="https://utteranc.es/client.js"
+        repo="szl2/szl2.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+}}
