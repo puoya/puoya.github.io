@@ -4,11 +4,5 @@
 = Blog
 \n
 - 2021
--- \begin{aligned}
-\frac{1}{2}CV^2 &= \frac{1}{2} (100\text{ }\mu\text{F}) (63\text{ V})^2\\
-&= \frac{1}{2} (100 \cdot 10^{-6}\text{ F}) (63^2\text{ V}^2)\\
-&= \frac{1}{2} (100 \cdot 10^{-6}\frac{\text{C}}{\text{V}}) (63^2\text{ V}^2)\\
-&= \frac{1}{2} (100 \cdot 10^{-6}\frac{\text{C}}{\text{J/C}}) (63^2\frac{\text{J}^2}{\text{C}^2})\\
-&\approx 0.2 \text{ J},
-\end{aligned}
+-- $x^T Y$
 -- [blog/blog1.html Blog 6]
