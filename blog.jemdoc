@@ -9,6 +9,9 @@ Let us begin with the definition of /Hilbert spaces/.
 {*Definition*}
 A Hilbert Space is an /inner product space/ that is /complete/ and /separable/ with respect to the norm defined by the inner product.
 ~~~
+
+A reproducing kernel Hilbert space (RKHS) is a family of functions on some set $X$ that forms a Hilbert space, with an associated kernel.
+
 \(
 \begin{aligned}
 \nabla \cdot \mathbf{D} &= \rho_f\\
