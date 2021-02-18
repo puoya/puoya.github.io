@@ -19,6 +19,10 @@ To start with, let us definne what we mean by a kernel. We will stick to Euclide
 Let $\mathcal{X}$ be a closed subset of $\mathbb{R}^d$. A real-valued function $K: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ is called a \Mercer kernel\ provided the following conditions are met:
 
 . It is symmetric, i.e., $K(x; x^{\prime}) = K(x^{\prime}; x)$ for any $x, x^{\prime} \in \mathcal{X}$.
+. It is continuous, i.e., if $\{ x_n \}$ is a sequence of points in $\mathcal{X}$ converging to a point $x$, then
+\[
+	\lim_{n \rightarrow \infty} K(x_n, x^{\prime}) = K(x,x^{\prime}), \ \forall x^{\prime} \in \mathcal{X}
+\]
 ~~~
 
 
