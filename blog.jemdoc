@@ -1,9 +1,7 @@
 # jemdoc: menu{MENU}{blog.html} nofooter
 = Blog
 \n
-= Blog
-\n
-== Reproducing Kernel Hilbert Space
+= Reproducing Kernel Hilbert Space
 Let us begin with the definition of /Hilbert spaces/.
 ~~~
 {*Definition*}
@@ -28,6 +26,21 @@ Let $\mathcal{X}$ be a closed subset of $\mathbb{R}^d$. A real-valued function $
 	\sum_{i,j \in [n]} \alpha_i \alpha_j K(x_i, x_j) \geq 0.
 \)
 ~~~
+
+Suppose we have a fixed kernel $K$ on our feature space $\mathcal{X}$ (which we assume to be a closed subset of $\mathbb{R}^d$). Let $\mathcal{L}_K( \mathcal{X})$ be the linear span of the set $\{ K(x^{\prime}, \cdot): x^{\prime} \in \mathcal{X} \}$, i.e., the set of all
+functions $f: \mathcal{X} \rightarrow \mathbb{R}$ of the form
+\(
+	f(x) = \sum_{j=1}^{N} c_j K(x_j, x)
+\)
+for all possible choices of $N \in \mathbb{N}$, $c_1, \ldots, c_N \in \mathbb{R}$, and $x_1, \ldots, x_N \in \mathcal{X}$.
+
+
+~~~
+{*Fact*}
+$\mathcal{L}_K( \mathcal{X})$ is a vector space.
+~~~
+
+It turns out that, for any Mercer kernel $K$, we can complete $\mathcal{L}_K( \mathcal{X})$ into a Hilbert space of functions that can potentially represent any continuous function from $\mathcal{X}$ into $\mathbb{R}$, provided $K$ is chosen appropriately.
 
 
 -- [blog/blog1.html Blog 15]

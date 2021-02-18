@@ -42,10 +42,7 @@ MathJax.Hub.Config({
 <div id="subtitle"><br />
 </div>
 </div>
-<h1>Blog</h1>
-<p><br />
-</p>
-<h2>Reproducing Kernel Hilbert Space</h2>
+<h1>Reproducing Kernel Hilbert Space</h1>
 <p>Let us begin with the definition of <i>Hilbert spaces</i>.
 </p>
 <div class="infoblock">
@@ -85,6 +82,23 @@ MathJax.Hub.Config({
 	\sum_{i,j \in [n]} \alpha_i \alpha_j K(x_i, x_j) \geq 0.
 \]
 </p></div></div>
+<p>Suppose we have a fixed kernel \(K\) on our feature space \(\mathcal{X}\) (which we assume to be a closed subset of \(\mathbb{R}^d\)). Let \(\mathcal{L}_K( \mathcal{X})\) be the linear span of the set \(\{ K(x^{\prime}, \cdot): x^{\prime} \in \mathcal{X} \}\), i.e., the set of all
+functions \(f: \mathcal{X} \rightarrow \mathbb{R}\) of the form
+</p>
+<p style="text-align:center">
+\[
+	f(x) = \sum_{j=1}^{N} c_j K(x_j, x)
+\]
+</p><p>for all possible choices of \(N \in \mathbb{N}\), \(c_1, \ldots, c_N \in \mathbb{R}\), and \(x_1, \ldots, x_N \in \mathcal{X}\).
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>Fact</b></div>
+<div class="blockcontent">
+<p>\(\mathcal{L}_K( \mathcal{X})\) is a vector space.
+</p>
+</div></div>
+<p>It turns out that, for any Mercer kernel \(K\), we can complete \(\mathcal{L}_K( \mathcal{X})\) into a Hilbert space of functions that can potentially represent any continuous function from \(\mathcal{X}\) into \(\mathbb{R}\), provided \(K\) is chosen appropriately.
+</p>
 
 <ul>
 <li>
