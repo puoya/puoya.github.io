@@ -14,6 +14,13 @@ A reproducing kernel Hilbert space (RKHS) is a family of functions on some set $
 
 To start with, let us definne what we mean by a kernel. We will stick to Euclidean feature spaces $\mathcal{X}$, although everything works out if $\mathcal{X}$ is an arbitrary separable metric space.
 
+~~~
+{*Definition*}
+Let $\mathcal{X}$ be a closed subset of $\mathbb{R}^d$. A real-valued function $K: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ is called a \Mercer kernel\ provided the following conditions are met:
+
+. It is symmetric, i.e., $K(x; x^{\prime}) = K(x^{\prime}; x)$ for any $x, x^{\prime} \in \mathcal{X}$.
+~~~
+
 
 \(
 \begin{aligned}
