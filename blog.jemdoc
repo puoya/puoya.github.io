@@ -5,4 +5,16 @@
 \n
 - 2021
 -- $x^T xY$
--- [blog/blog1.html Blog 7]
+--   \(
+  f(x) = \left\{
+  \begin{array}{ll}
+  3, & x \leq 0 \\
+  5, & x > 0. \\
+  \end{array}\right.
+  \)
+-- &f(x) = \left\{
+  \begin{array}{ll}
+  3, & x \leq 0 \\
+  5, & x > 0. \\
+  \end{array}\right. &
+-- [blog/blog1.html Blog 8]
