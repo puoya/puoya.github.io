@@ -17,4 +17,8 @@
   3, & x \leq 0 \\
   5, & x > 0. \\
   \end{array}\right. &
+-- asdjkhj \begin{align}
+V &= -IR \label{RES-NOV}\\
+I &= -\frac{V}{R} \label{RES-NOI}
+\end{align}
 -- [blog/blog1.html Blog 10]
