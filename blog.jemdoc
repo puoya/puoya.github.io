@@ -4,7 +4,8 @@
 = Blog
 \n
 - 2021
--- \(
+
+\(
 \begin{aligned}
 \nabla \cdot \mathbf{D} &= \rho_f\\
 \nabla \cdot \mathbf{B} &= 0\\
