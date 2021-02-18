@@ -10,7 +10,10 @@ Let us begin with the definition of /Hilbert spaces/.
 A Hilbert Space is an /inner product space/ that is /complete/ and /separable/ with respect to the norm defined by the inner product.
 ~~~
 
-A reproducing kernel Hilbert space (RKHS) is a family of functions on some set $X$ that forms a Hilbert space, with an associated kernel.
+A reproducing kernel Hilbert space (RKHS) is a family of functions on some set $\mathcal{X}$ that forms a Hilbert space, with an associated kernel.
+
+To start with, let us definne what we mean by a kernel. We will stick to Euclidean feature spaces $\mathcal{X}$, although everything works out if $\mathcal{X}$ is an arbitrary separable metric space.
+
 
 \(
 \begin{aligned}
