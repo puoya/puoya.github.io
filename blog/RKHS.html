@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Blog</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../index.html">home</a></div>
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../publication.html">publications</a></div>
+<div class="menu-item"><a href="../teaching.html">teaching</a></div>
+<div class="menu-item"><a href="../software.html">software</a></div>
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../news.html">news</a></div>
+<div class="menu-item"><a href="../blog.html">blog</a></div>
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="mailto:tabaghi2@illinois.edu">email</a></div>
+<div class="menu-category"><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /></div>
+<div class="menu-item"><a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+MathJax</a></div>
+<div class="menu-category"><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /></div>
+<div class="menu-category"><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Blog</h1>
+<div id="subtitle"><br />
+</div>
+</div>
+<h1>Reproducing Kernel Hilbert Space</h1>
+<p>Hilbert spaces are generalizations of the usual finite-dimensional Euclidean spaces. Also, they have certain favorable convergence
+properties, yielding (unique) linear projections of their elements onto closed linear subspaces, or, more generally, unique nonlinear projections onto closed convex sets.
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>Definition</b></div>
+<div class="blockcontent">
+<p>A normed space \((V; \| \cdot \|_{V} )\) is complete if any Cauchy sequence \(\{ v_n \}\) of its elements is convergent. If the norm \(\| \cdot \|_{V}\) is induced by an inner product and if it is
+complete, then we say that V is a Hilbert space.
+</p>
+</div></div>
+<p>A reproducing kernel Hilbert space (RKHS) is a family of functions on some set \(\mathcal{X}\) that forms a Hilbert space, with an associated kernel.
+</p>
+<p>To start with, let us define what we mean by a kernel. We will stick to Euclidean feature spaces \(\mathcal{X}\), although everything works out if \(\mathcal{X}\) is an arbitrary separable metric space.
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>Definition</b></div>
+<div class="blockcontent">
+<p>Let \(\mathcal{X}\) be a closed subset of \(\mathbb{R}^d\). A real-valued function \(K: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}\) is called a  Mercer kernel  provided the following conditions are met:
+</p>
+<ol>
+<li><p>It is symmetric, i.e., \(K(x; x^{\prime}) = K(x^{\prime}; x)\) for any \(x, x^{\prime} \in \mathcal{X}\).
+</p>
+</li>
+<li><p>It is continuous, i.e., if \(\{ x_n \}\) is a sequence of points in \(\mathcal{X}\) converging to a point \(x\), then
+</p>
+</li>
+</ol>
+<p style="text-align:center">
+\[
+	\lim_{n \rightarrow \infty} K(x_n, x^{\prime}) = K(x,x^{\prime}), \ \forall x^{\prime} \in \mathcal{X}.
+\]
+</p><ol>
+<li><p>It is positive semidefinite, i.e., for all \(\alpha_1, \ldots, \alpha_{n} \in \mathbb{R}\) and all \(x_1, \ldots, x_n \in \mathcal{X}\),
+</p>
+</li>
+</ol>
+<p style="text-align:center">
+\[
+	\sum_{i,j \in [n]} \alpha_i \alpha_j K(x_i, x_j) \geq 0.
+\]
+</p></div></div>
+<p>Suppose we have a fixed kernel \(K\) on our feature space \(\mathcal{X}\) (which we assume to be a closed subset of \(\mathbb{R}^d\)). Let \(\mathcal{L}_K( \mathcal{X})\) be the linear span of the set \(\{ K(x^{\prime}, \cdot): x^{\prime} \in \mathcal{X} \}\), i.e., the set of all
+functions \(f: \mathcal{X} \rightarrow \mathbb{R}\) of the form
+</p>
+<p style="text-align:center">
+\[
+	f(x) = \sum_{j=1}^{N} c_j K(x_j, x)
+\]
+</p><p>for all possible choices of \(N \in \mathbb{N}\), \(c_1, \ldots, c_N \in \mathbb{R}\), and \(x_1, \ldots, x_N \in \mathcal{X}\).
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>Fact</b></div>
+<div class="blockcontent">
+<p>\(\mathcal{L}_K( \mathcal{X})\) is a vector space.
+</p>
+</div></div>
+<p>It turns out that, for any Mercer kernel \(K\), we can complete \(\mathcal{L}_K( \mathcal{X})\) into a Hilbert space of functions that can potentially represent any continuous function from \(\mathcal{X}\) into \(\mathbb{R}\), provided \(K\) is chosen appropriately.
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>Theorem</b></div>
+<div class="blockcontent">
+<p>Let \(\mathcal{X}\) be a closed subset of \(\mathbb{R}^d\), and let \(K: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}\) be a Mercer kernel. Then there exists a unique Hilbert space \((\mathcal{H}_K, \langle \cdot, \cdot \rangle\) of real-valued functions on \(\mathcal{X}\) with the following properties:
+</p>
+<ol>
+<li><p>For all \(x \in \mathcal{X}\), the function \(K_x(\cdot) := K(x, \cdot)\) is an element of \(\mathcal{H}_K\), and \(\langle K_x, K_{x^{\prime}} \rangle = K(x,x^{\prime})\) for all \(x, x^{\prime} \in \mathcal{X}\).
+</p>
+</li>
+<li><p>The linear space \(\mathcal{L}_K(\mathcal{X})\) is dense in \(\mathcal{H}_K\), i.e., for any \(f \in \mathcal{H}_K\) and any \(\epsilon &gt; 0\) there exist some \(N \in \mathbb{N}\), \(c_1, \ldots, c_N \in \mathbb{R}\), and \(x_1, \ldots, x_N \in \mathcal{X}\), such that
+</p>
+</li>
+</ol>
+<p style="text-align:center">
+\[
+	\| f - \sum_{j \in [N]}c_j K_{x_j} \|_{K} &lt; \epsilon.
+\]
+</p><ol>
+<li><p>For all \(f \in \mathcal{H}_K\) and all \(x \in \mathcal{X}\),
+</p>
+</li>
+</ol>
+<p style="text-align:center">
+\[
+	f(x) = \langle K_x , f \rangle_{K}.
+\]
+</p><p>Moreover, the functions in \(\mathcal{H}_K\) are continuous. The Hilbert space \(\mathcal{H}_K\) is called the Reproducing Kernel Hilbert Space (RKHS) associated with \(K\).
+</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle"><b>Proposition</b></div>
+<div class="blockcontent">
+<p>Suppose \(K(x, y)\) is a Mercer kernel on \(\mathcal{X} \times \mathcal{X}\), where \(\mathcal{X}\) is a closed subset of \(\mathbb{R}^d\) (or more generally, \(\mathcal{X}\) could be any complete separable metric space). Then there is a sequence of continuous functions \((\psi_i)\)
+on \(\mathcal{X}\) such that 
+</p>
+<p style="text-align:center">
+\[
+	K(x,y) = \sum_{i=1}^{\infty} \psi_i(x) \psi_i(y)
+\]
+</p><p>and
+</p>
+<p style="text-align:center">
+\[
+c \in \ell^2 \ \mbox{and} \ \sum_{i=1}^{\infty}c_i \psi_i = 0 \Rightarrow c=0
+\]
+</p><p>and  \(\psi_1, \psi_2,\ldots\) forms a complete orthonormal basis for the RKHS \(\mathcal{H}_K\).
+</p>
+</div></div>
+<h3>References</h3>
+<ol>
+<li><p><a href="http://maxim.ece.illinois.edu/teaching/SLT/" target=&ldquo;blank&rdquo;>Maxim Raginsky and Bruce Hajek. Lecture notes for ECE 543, Statistical Learning Theory.</a>
+</p>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</body>
+</html>
