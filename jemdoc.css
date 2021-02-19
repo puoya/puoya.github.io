@@ -12,7 +12,7 @@ body {
 	background: white;
 	font-family:  Verdana, Arial, Helvetica, sans-serif;
 	font-size: 1vw;
-	padding-bottom: 0vw;
+	padding-bottom: 0px;
 	margin: 0vw;
 	margin-left: 0.0vw;
 	margin-top: 0.0vw;
@@ -96,14 +96,14 @@ div.menu-category {
 }
 
 div.menu-itvw {
-	padding-left: 1vw;
-	text-indent: -1vw;
+	padding-left: 16px;
+	text-indent: -16px;
 }
 
 div#toptitle {
 	padding-bottom: 0.2vw;
 	margin-bottom: 1.5vw;
-	margin-top: -4.1vw;
+	margin-top: -4.3vw;
 	border-bottom: 3px double gray;
 }
 
