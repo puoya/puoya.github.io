@@ -1,37 +1,37 @@
-/* Default css file for jemdoc. */
+/* Default css file for jvwdoc. */
 
 table#tlayout {
     border: none;
     border-collapse: collapse;
     background: white;
-    margin-left: 0.0em;
-	margin-top: 0.0em;
+    margin-left: 0.0vw;
+	margin-top: 0.0vw;
 }
 
 body {
 	background: white;
 	font-family:  Verdana, Arial, Helvetica, sans-serif;
-	font-size: 90%;
+	font-size: 1vw;
 	padding-bottom: 0px;
-	margin: 0em;
-	margin-left: 0.0em;
-	margin-top: 0.0em;
+	margin: 0vw;
+	margin-left: 0.0vw;
+	margin-top: 0.0vw;
 	border: none;
 }
 
 #layout-menu {
 	background: #0c1333;
 	border: 1px solid #0c1333;
-	padding-top: 0.0em;
+	padding-top: 0.0vw;
 	padding-left: 0px; 
 	padding-right: 4px;
-	font-size: 1.0em;
+	font-size: 1vw;
 	width: auto;
 	white-space: nowrap;
     text-align: left;
     vertical-align: top;
-    margin-left: 0.0em;
-    margin-top: 0.0em;
+    margin-left: 0.0vw;
+    margin-top: 0.0vw;
 }
 
 #layout-menu td {
@@ -40,21 +40,21 @@ body {
 }
 
 #layout-content {
-	padding-top: 0.0em;
-	padding-left: 1.0em;
-	padding-right: 1.0em;
+	padding-top: 0.0vw;
+	padding-left: 1.0vw;
+	padding-right: 1.0vw;
     border: none;
     background: white;
     text-align: left;
     vertical-align: top;
-    margin-left: 2.0em;
-	margin-right: 2.0em;
+    margin-left: 2.0vw;
+	margin-right: 2.0vw;
 }
 
 #layout-menu a {
-	line-height: 1.5em;
-	margin-left: 2.0em;
-	margin-right: 2.0em;
+	line-height: 1.5vw;
+	margin-left: 2.0vw;
+	margin-right: 2.0vw;
 }
 
 tt {
@@ -62,7 +62,7 @@ tt {
 }
 
 pre, tt {
-	font-size: 90%;
+	font-size: 0.9vw;
 	font-family:  Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -89,34 +89,34 @@ a:hover {
 
 div.menu-category {
 	border-bottom: none /*1px solid gray; */
-	margin-top: 0.8em;
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
+	margin-top: 0.8vw;
+	padding-top: 0.2vw;
+	padding-bottom: 0.1vw;
 	font-weight: bold;
 }
 
-div.menu-item {
+div.menu-itvw {
 	padding-left: 16px;
 	text-indent: -16px;
 }
 
 div#toptitle {
-	padding-bottom: 0.2em;
-	margin-bottom: 1.5em;
-	margin-top: -4.3em;
+	padding-bottom: 0.2vw;
+	margin-bottom: 1.5vw;
+	margin-top: -4.3vw;
 	border-bottom: 3px double gray;
 }
 
 /* Reduce space if we begin the page with a title. */
 div#toptitle + h2, div#toptitle + h3 {
-	margin-top: -0.7em;
+	margin-top: -0.7vw;
 }
 
 div#subtitle {
-	margin-top: 0.0em;
-	margin-bottom: 0.0em;
-	padding-top: 0em;
-	padding-bottom: 0.1em;
+	margin-top: 0.0vw;
+	margin-bottom: 0.0vw;
+	padding-top: 0vw;
+	padding-bottom: 0.1vw;
 }
 
 em {
@@ -130,35 +130,35 @@ strong {
 
 h1, h2, h3 {
 	color: #000270;
-	margin-top: 0.7em;
-	margin-bottom: 0.3em;
-	padding-bottom: 0.2em;
+	margin-top: 0.7vw;
+	margin-bottom: 0.3vw;
+	padding-bottom: 0.2vw;
 	line-height: 1.0;
-	padding-top: 0.5em;
+	padding-top: 0.5vw;
 	border-bottom: 1px solid #aaaaaa;
 }
 
 h1 {
-	font-size: 165%;
+	font-size: 1.65vw;
 }
 
 h2 {
-	padding-top: 0.8em;
-	font-size: 125%;
+	padding-top: 0.8vw;
+	font-size: 1.25vw;
 }
 
 h2 + h3 {
-    padding-top: 0.2em;
+    padding-top: 0.2vw;
 }
 
 h3 {
-	font-size: 110%;
+	font-size: 1.1vw;
 	border-bottom: none;
 }
 
 p {
-	margin-top: 0.0em;
-	margin-bottom: 0.8em;
+	margin-top: 0.0vw;
+	margin-bottom: 0.8vw;
 	padding: 0;
 	line-height: 1.3;
 }
@@ -171,8 +171,8 @@ pre {
 div#footer {
 	font-size: small;
 	border-top: 1px solid #c0c0c0;
-	padding-top: 0.1em;
-	margin-top: 4.0em;
+	padding-top: 0.1vw;
+	margin-top: 4.0vw;
 	color: #c0c0c0;
 }
 
@@ -186,13 +186,13 @@ div#footer-text {
 }
 
 ul, ol, dl {
-	margin-top: 0.2em;
+	margin-top: 0.2vw;
 	padding-top: 0;
-	margin-bottom: 0.8em;
+	margin-bottom: 0.8vw;
 }
 
 dt {
-	margin-top: 0.5em;
+	margin-top: 0.5vw;
 	margin-bottom: 0;
 }
 
@@ -214,11 +214,11 @@ ul {
 }
 
 p + ul, p + ol {
-	margin-top: -0.5em;
+	margin-top: -0.5vw;
 }
 
 li ul, li ol {
-	margin-top: -0.3em;
+	margin-top: -0.3vw;
 }
 
 ol {
@@ -227,7 +227,7 @@ ol {
 }
 
 li p, dd p {
-	margin-bottom: 0.3em;
+	margin-bottom: 0.3vw;
 }
 
 
@@ -240,25 +240,25 @@ ol ol ol {
 }
 
 p + div.codeblock {
-	margin-top: -0.6em;
+	margin-top: -0.6vw;
 }
 
 div.codeblock, div.infoblock {
 	margin-right: 0%;
-	margin-top: 1.2em;
-	margin-bottom: 1.3em;
+	margin-top: 1.2vw;
+	margin-bottom: 1.3vw;
 }
 
 div.blocktitle {
 	font-weight: bold;
 	color: #cd7b62;
-	margin-top: 1.2em;
-	margin-bottom: 0.1em;
+	margin-top: 1.2vw;
+	margin-bottom: 0.1vw;
 }
 
 div.blockcontent {
 	border: 1px solid silver;
-	padding: 0.3em 0.5em;
+	padding: 0.3vw 0.5vw;
 }
 
 div.infoblock > div.blockcontent {
@@ -266,19 +266,19 @@ div.infoblock > div.blockcontent {
 }
 
 div.blockcontent p + ul, div.blockcontent p + ol {
-	margin-top: 0.4em;
+	margin-top: 0.4vw;
 }
 
 div.infoblock p {
-	margin-bottom: 0em;
+	margin-bottom: 0vw;
 }
 
 div.infoblock li p, div.infoblock dd p {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.5vw;
 }
 
 div.infoblock p + p {
-	margin-top: 0.8em;
+	margin-top: 0.8vw;
 }
 
 div.codeblock > div.blockcontent {
@@ -317,33 +317,33 @@ span.comment, span.comment > *, span.string, span.string > * {
 }
 
 #fwtitle #toptitle {
-	padding-left: 0.5em;
-	margin-bottom: 0.5em;
+	padding-left: 0.5vw;
+	margin-bottom: 0.5vw;
 }
 
 #layout-content h1:first-child, #layout-content h2:first-child, #layout-content h3:first-child {
-	margin-top: -0.7em;
+	margin-top: -0.7vw;
 }
 
 div#toptitle h1, #layout-content div#toptitle h1 {
-	margin-bottom: 0.0em;
-	padding-bottom: 0.1em;
+	margin-bottom: 0.0vw;
+	padding-bottom: 0.1vw;
 	padding-top: 0;
-	margin-top: 0.5em;
+	margin-top: 0.5vw;
 	border-bottom: none;
 }
 
 img.eq {
 	padding: 0;
-	padding-left: 0.1em;
-	padding-right: 0.1em;
+	padding-left: 0.1vw;
+	padding-right: 0.1vw;
 	margin: 0;
 }
 
 img.eqwl {
-	padding-left: 2em;
-	padding-top: 0.6em;
-	padding-bottom: 0.2em;
+	padding-left: 2vw;
+	padding-top: 0.6vw;
+	padding-bottom: 0.2vw;
 	margin: 0;
 }
 
@@ -354,14 +354,14 @@ table {
 
 td {
     padding: 2px;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     text-align: center;
     border: 1px solid gray;
 }
 
 table + table {
-    margin-top: 1em;
+    margin-top: 1vw;
 }
 
 tr.heading {
