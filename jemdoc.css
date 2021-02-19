@@ -62,7 +62,7 @@ tt {
 }
 
 pre, tt {
-	font-size: 90%;
+	font-size: 0.9vw;
 	font-family:  Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -139,12 +139,12 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 165%;
+	font-size: 1.65vw;
 }
 
 h2 {
 	padding-top: 0.8em;
-	font-size: 125%;
+	font-size: 1.25vw;
 }
 
 h2 + h3 {
@@ -152,7 +152,7 @@ h2 + h3 {
 }
 
 h3 {
-	font-size: 110%;
+	font-size: 1.1vw;
 	border-bottom: none;
 }
 
