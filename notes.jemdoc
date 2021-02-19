@@ -1,0 +1,11 @@
+# jemdoc: menu{MENU}{notes.html} nofooter
+= Notes
+\n
+= Hilbert manifold
+
+
+=== References
+. 
+
+== Other notes
+. [notes/RKHS.html *Reproducing Kernel Hilbert Space*]
