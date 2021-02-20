@@ -7,7 +7,4 @@ Let $\mathcal{H}$ be a Hilbert space. A Riemannian Hilbert manifold $(\mathcal{M
 joining them. Hence, we can introduce a metric $d$, defining $d(x, y)$ the infimum of the lengths of all differential paths joining $x, y$ and one can prove that ($\mathcal{M}, d)$ is a metric space and d induces the same topology of $\mathcal{M}$.
 
 === References
-. 
-
-== Other notes
-. [notes/RKHS.html *Reproducing Kernel Hilbert Space*]
+. [https://arxiv.org/pdf/1610.01527.pdf Leonardo Biliotti and Francesco Mercuri. Riemannian Hilbert Manifolds.]
