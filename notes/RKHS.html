@@ -49,7 +49,7 @@ properties, yielding (unique) linear projections of their elements onto closed l
 <div class="infoblock">
 <div class="blocktitle"><b>Definition</b></div>
 <div class="blockcontent">
-<p>A normed space \((V; \| \cdot \|_{V} )\) is complete if any Cauchy sequence \(\{ v_n \}\) of its elements is convergent. If the norm \(\| \cdot \|_{V}\) is induced by an inner product and if it is
+<p>A normed space \((V, \| \cdot \|_{V} )\) is complete if any Cauchy sequence \(\{ v_n \}\) of its elements is convergent. If the norm \(\| \cdot \|_{V}\) is induced by an inner product and if it is
 complete, then we say that V is a Hilbert space.
 </p>
 </div></div>
@@ -99,15 +99,15 @@ functions \(f: \mathcal{X} \rightarrow \mathbb{R}\) of the form
 <p>\(\mathcal{L}_K( \mathcal{X})\) is a vector space.
 </p>
 </div></div>
-<p>It turns out that, for any Mercer kernel \(K\), we can complete \(\mathcal{L}_K( \mathcal{X})\) into a Hilbert space of functions that can potentially represent any continuous function from \(\mathcal{X}\) into \(\mathbb{R}\), provided \(K\) is chosen appropriately.
+<p>For any Mercer kernel \(K\), we can complete \(\mathcal{L}_K( \mathcal{X})\) into a Hilbert space of functions that can potentially represent any continuous function from \(\mathcal{X}\) into \(\mathbb{R}\), provided \(K\) is chosen appropriately.
 </p>
 <div class="infoblock">
 <div class="blocktitle"><b>Theorem</b></div>
 <div class="blockcontent">
-<p>Let \(\mathcal{X}\) be a closed subset of \(\mathbb{R}^d\), and let \(K: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}\) be a Mercer kernel. Then there exists a unique Hilbert space \((\mathcal{H}_K, \langle \cdot, \cdot \rangle\) of real-valued functions on \(\mathcal{X}\) with the following properties:
+<p>Let \(\mathcal{X}\) be a closed subset of \(\mathbb{R}^d\), and let \(K: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}\) be a Mercer kernel. Then there exists a unique Hilbert space \((\mathcal{H}_K, \langle \cdot, \cdot \rangle_{K}\)) of real-valued functions on \(\mathcal{X}\) with the following properties:
 </p>
 <ol>
-<li><p>For all \(x \in \mathcal{X}\), the function \(K_x(\cdot) := K(x, \cdot)\) is an element of \(\mathcal{H}_K\), and \(\langle K_x, K_{x^{\prime}} \rangle = K(x,x^{\prime})\) for all \(x, x^{\prime} \in \mathcal{X}\).
+<li><p>For all \(x \in \mathcal{X}\), the function \(K_x(\cdot) := K(x, \cdot)\) is an element of \(\mathcal{H}_K\), and \(\langle K_x, K_{x^{\prime}} \rangle_{K} = K(x,x^{\prime})\) for all \(x, x^{\prime} \in \mathcal{X}\).
 </p>
 </li>
 <li><p>The linear space \(\mathcal{L}_K(\mathcal{X})\) is dense in \(\mathcal{H}_K\), i.e., for any \(f \in \mathcal{H}_K\) and any \(\epsilon &gt; 0\) there exist some \(N \in \mathbb{N}\), \(c_1, \ldots, c_N \in \mathbb{R}\), and \(x_1, \ldots, x_N \in \mathcal{X}\), such that
