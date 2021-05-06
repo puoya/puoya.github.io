@@ -1254,7 +1254,7 @@ def procfile(f):
   # convert these to a dictionary.
   showfooter = False
   showsourcelink = False
-  showlastupdated = True
+  showlastupdated = False
   showlastupdatedtime = True
   nodefaultcss = False
   fwtitle = False
