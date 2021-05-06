@@ -1255,7 +1255,7 @@ def procfile(f):
   showfooter = False
   showsourcelink = False
   showlastupdated = False
-  showlastupdatedtime = True
+  showlastupdatedtime = False
   nodefaultcss = False
   fwtitle = False
   css = []
