@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{notes.html} nofooter
+# jemdoc: menu{MENU}{notes.html}, nofooter
 = Notes
 \n
 
