@@ -1297,7 +1297,7 @@ def procfile(f):
           fwtitle = True
 
         elif b.startswith('showsource'):
-          showsourcelink = True
+          showsourcelink = False
 
         elif b.startswith('nodefaultcss'):
           nodefaultcss = True
