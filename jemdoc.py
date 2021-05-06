@@ -254,7 +254,7 @@ def standardconf():
   </div>
   
   [lastupdated]
-
+  %Page generated |, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 
   [sourcelink]
   (<a href="|">source</a>)
