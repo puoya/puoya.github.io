@@ -254,7 +254,7 @@ def standardconf():
   </div>
   
   [lastupdated]
-  %Page generated |, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+  Page generated |, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 
   [sourcelink]
   (<a href="|">source</a>)
@@ -1254,8 +1254,8 @@ def procfile(f):
   # convert these to a dictionary.
   showfooter = False
   showsourcelink = False
-  showlastupdated = False
-  showlastupdatedtime = False
+  showlastupdated = True
+  showlastupdatedtime = True
   nodefaultcss = False
   fwtitle = False
   css = []
@@ -1297,7 +1297,7 @@ def procfile(f):
           fwtitle = True
 
         elif b.startswith('showsource'):
-          showsourcelink = False
+          showsourcelink = True
 
         elif b.startswith('nodefaultcss'):
           nodefaultcss = True
