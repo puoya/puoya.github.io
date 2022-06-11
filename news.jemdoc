@@ -1,11 +1,11 @@
 # jemdoc: menu{MENU}{news.html}, nofooter
 = news
 \n
-= News
+= news
 \n
 
 - 2021
--- on november 2, i defended my doctoral dissertation \n  \[https://www.ideals.illinois.edu/handle/2142/113832 *machine learning in space forms: embeddings, classification, and similarity comparisons* \] \[ [https://uofi.box.com/s/qzxs184cyw8p8l62tpaij5iq7an0unr3 final exam presentation] \] \n
+-- on november 2, i successfully defended my doctoral dissertation \n  [https://www.ideals.illinois.edu/handle/2142/113832 *machine learning in space forms: embeddings, classification, and similarity comparisons*] \[ [https://uofi.box.com/s/qzxs184cyw8p8l62tpaij5iq7an0unr3 final exam presentation] \] \n
 Doctoral Committee: Ivan Dokmanic, Olgica Milenkovic (advisors), Bruce Hajek, and Maxim Raginsky
 -- * [https://arxiv.org/pdf/2109.03781 Highly Scalable and Provably Accurate Classification in Poincare Balls] * is accepted for publication in 21st IEEE International Conference on Data Mining (ICDM)
 -- My talk on *Hyperbolic Distance Geometry Problems* \[ [http://www.fields.utoronto.ca/talks/Hyperbolic-Distance-Geometry-Problems abstract], [https://www.youtube.com/watch?v=zna2vuLdets&list=PLArBKNfJxuuklX7EVckSBqZZlSS6U5NcU&index=4 presentation] \] \n
