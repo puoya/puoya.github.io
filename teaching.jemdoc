@@ -1,9 +1,9 @@
 # jemdoc: menu{MENU}{teaching.html}, nofooter
-= Teaching
+= teaching
 \n
-= Teaching
-== Teaching Assistant
-- \[FA \'18\] ECE 534: Random Processes, UIUC
-- \[SP \'14\] Digital Signal Processing, AUT
-- \[FA \'13\] Digital Signal Processing, AUT
-- \[FA \'13\] Communication Systems, AUT
+= teaching
+== teaching assistant
+- \[fa \'18\] ece 534: random processes, uiuc
+- \[sp \'14\] digital signal processing, aut
+- \[fa \'13\] digital signal processing, aut
+- \[fa \'13\] communication systems, aut
