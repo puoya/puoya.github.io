@@ -1,6 +1,6 @@
 # jemdoc: menu{MENU}{notes.html}, nofooter
-= Notes
+= notes
 \n
 
-== List of notes
-. [notes/RKHS.html *Reproducing Kernel Hilbert Space*]\[incomplete\]
+== list of notes
+. [notes/RKHS.html *reproducing kernel hilbert space*]\[incomplete\]
