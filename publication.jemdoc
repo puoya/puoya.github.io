@@ -4,8 +4,12 @@
 = publications 
 \n
 - 2021
--- [https://arxiv.org/abs/2006.09858 *Geometry of Comparisons*] \n 
-Puoya Tabaghi and Ivan Dokmanic. /In preparation for Conference on Neural Information Processing Systems (NeurIPS)./ \n
+-- [https://ieeexplore.ieee.org/abstract/document/9679024 *highly scalable and provably accurate classification in poincare balls*] \n
+eli chien, chao pan, puoya tabaghi, and olgica milenkovic. /ieee international conference on data mining (icdm)./
+
+
+-- [https://arxiv.org/abs/2006.09858 *geometry of similarity comparisons*] \n 
+puoya tabaghi, jianhao peng, olgica milenkovic, and ivan dokmanic. / arXiv preprint: 2006.09858./  \n
 -- [https://ieeexplore.ieee.org/abstract/document/9435083 *on procrustes analysis in hyperbolic space*] \n 
 puoya tabaghi and ivan dokmanic. /ieee signal processing letters./ \n
 -- [https://arxiv.org/abs/2102.10204 *linear classifiers in product space forms*] \n 
