@@ -1,0 +1,4 @@
+jemdoc *.jemdoc
+git add -A  
+git commit -m "updating the index page"
+git push -u origin main 
