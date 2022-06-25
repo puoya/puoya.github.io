@@ -21,7 +21,7 @@ body {
 
 #layout-menu {
 	background: #0c1333;
-	border: none; /*1px solid #0c1333;*/
+	border: 1px solid #0c1333;
 	padding-top: 0.0em;
 	padding-left: 0px; 
 	padding-right: 4px;
@@ -72,7 +72,7 @@ a, a > tt {
 }
 
 a:hover {
-	border-bottom: 1px gray dotted;
+	border-bottom: none; /*1px gray dotted;*/
 }
 
 #layout-menu a.current:link, #layout-menu a.current:visited {
