@@ -18,7 +18,6 @@ body {
 	margin-top: 0.0em;
 	border: none;
 	height: 100vh; /* added by p, this is for the page */
-	min-height: -webkit-fill-available
 }
 
 #layout-menu {
@@ -35,7 +34,6 @@ body {
     margin-left: 0.0em;
     margin-top: 0.0em;
     height: 100vh; /* added by p, this is for menu */ 
-    min-height: -webkit-fill-available
 }
 
 #layout-menu td {
