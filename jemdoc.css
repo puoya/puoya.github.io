@@ -27,7 +27,7 @@ body {
 	padding-right: 4px;
 	font-size: 1.0em;
 	width: auto;
-	white-space: nowrap;
+	white-space: auto; /*nowrap;*/
     text-align: left;
     vertical-align: top;
     margin-left: 0.0em;
@@ -52,7 +52,7 @@ body {
 }
 
 #layout-menu a {
-	line-height: 0.5em;
+	line-height: 1.5em;
 	margin-left: 2.0em;
 	margin-right: 2.0em;
 }
