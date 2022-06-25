@@ -7,11 +7,12 @@
 \n
 	news						[news.html]
     notebook					[notebook.html]
+\n 
     miscellaneous				[miscellaneous.html]
 
 
 
-\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 
+\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 
 
 
 jemdoc+mathjax [https://github.com/wsshin/jemdoc_mathjax]
