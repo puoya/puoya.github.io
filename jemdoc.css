@@ -252,12 +252,12 @@ div.codeblock, div.infoblock {
 div.blocktitle {
 	font-weight: bold;
 	color: #cd7b62;
-	margin-top: 0.0em;
+	margin-top: 1.2em;
 	margin-bottom: 0.1em;
 }
 
 div.blockcontent {
-	border: 1px solid silver;
+	border: none /*1px solid silver; */
 	padding: 0.3em 0.5em;
 }
 
