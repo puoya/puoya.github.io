@@ -17,7 +17,6 @@ body {
 	margin-left: 0.0em;
 	margin-top: 0.0em;
 	border: none;
-	height: 100vh; /* added by p, this is for the page */
 }
 
 #layout-menu {
@@ -33,7 +32,6 @@ body {
     vertical-align: top;
     margin-left: 0.0em;
     margin-top: 0.0em;
-    height: 100vh; /* added by p, this is for menu */ 
 }
 
 #layout-menu td {
@@ -102,7 +100,6 @@ div.menu-item {
 	text-indent: -16px;
 }
 
-/* main pages */
 div#toptitle {
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
