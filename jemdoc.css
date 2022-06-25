@@ -17,7 +17,8 @@ body {
 	margin-left: 0.0em;
 	margin-top: 0.0em;
 	border: none;
-	height: 100%; /* added by p, this is for the page */
+	height: 100vh; /* added by p, this is for the page */
+	min-height: -webkit-fill-available
 }
 
 #layout-menu {
@@ -33,7 +34,8 @@ body {
     vertical-align: top;
     margin-left: 0.0em;
     margin-top: 0.0em;
-    height: 100%; /* added by p, this is for menu */ 
+    height: 100vh; /* added by p, this is for menu */ 
+    min-height: -webkit-fill-available
 }
 
 #layout-menu td {
