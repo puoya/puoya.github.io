@@ -29,14 +29,14 @@ body {
 	width: auto;
 	white-space: nowrap;
     text-align: left;
-    vertical-align: auto; /*top;*/
+    vertical-align: top;
     margin-left: 0.0em;
     margin-top: 0.0em;
 }
 
 #layout-menu td {
 	background: #0c1333;
-    vertical-align: top;
+    vertical-align: auto;/*top;*/
 }
 
 #layout-content {
