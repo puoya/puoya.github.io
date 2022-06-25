@@ -257,7 +257,7 @@ div.blocktitle {
 }
 
 div.blockcontent {
-	border: none /*1px solid silver; */
+	border: 1px solid silver;
 	padding: 0.3em 0.5em;
 }
 
@@ -348,7 +348,7 @@ img.eqwl {
 }
 
 table {
-    border: 2px solid black;
+    border: none /*2px solid black;*/
     border-collapse: collapse;
 }
 
