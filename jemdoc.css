@@ -17,7 +17,7 @@ body {
 	margin-left: 0.0em;
 	margin-top: 0.0em;
 	border: none;
-	height: 100vh; /* added by p, this is for the page */
+	height: 100%; /* added by p, this is for the page */
 }
 
 #layout-menu {
@@ -33,7 +33,7 @@ body {
     vertical-align: top;
     margin-left: 0.0em;
     margin-top: 0.0em;
-    height: 100vh; /* added by p, this is for menu */ 
+    height: 100%; /* added by p, this is for menu */ 
 }
 
 #layout-menu td {
