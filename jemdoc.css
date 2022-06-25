@@ -90,7 +90,7 @@ a:hover {
 div.menu-category {
 	border-bottom: none /*1px solid gray; */
 	margin-top: 10.8em;
-	padding-top: 10.2em;
+	padding-top: 0.2em;
 	padding-bottom: 0.1em;
 	font-weight: bold;
 }
