@@ -49,11 +49,10 @@ body {
     vertical-align: top;
     margin-left: 2.0em;
 	margin-right: 2.0em;
-	height: 100%;
 }
 
 #layout-menu a {
-	line-height: 1.5em;
+	line-height: 0.5em;
 	margin-left: 2.0em;
 	margin-right: 2.0em;
 }
