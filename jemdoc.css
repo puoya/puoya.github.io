@@ -109,7 +109,7 @@ div#toptitle {
 
 /* Reduce space if we begin the page with a title. */
 div#toptitle + h2, div#toptitle + h3 {
-	margin-top: -10.7em;
+	margin-top: -0.7em;
 }
 
 div#subtitle {
@@ -130,7 +130,7 @@ strong {
 
 h1, h2, h3 {
 	color: #000270;
-	margin-top: 0.7em;
+	margin-top: 0.0em;
 	margin-bottom: 0.3em;
 	padding-bottom: 0.2em;
 	line-height: 1.0;
