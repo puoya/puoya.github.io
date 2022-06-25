@@ -89,9 +89,9 @@ a:hover {
 
 div.menu-category {
 	border-bottom: none /*1px solid gray; */
-	margin-top: 0.0em;
-	padding-top: 0.0em;
-	padding-bottom: 0.0em;
+	margin-top: 0.8em;
+	padding-top: 0.2em;
+	padding-bottom: 0.1em;
 	font-weight: bold;
 }
 
@@ -101,9 +101,9 @@ div.menu-item {
 }
 
 div#toptitle {
-	padding-bottom: 0.2em;
-	margin-bottom: 1.5em;
-	margin-top: -4.3em;
+	padding-bottom: 0.0em;
+	margin-bottom: 0em;
+	margin-top: 90em;
 	border-bottom: none; /*3px double gray; this was for hiding the top line*/ 
 }
 
