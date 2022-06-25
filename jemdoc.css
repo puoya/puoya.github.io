@@ -186,7 +186,7 @@ div#footer-text {
 }
 
 ul, ol, dl {
-	margin-top: 10.2em;
+	margin-top: 0.2em;
 	padding-top: 0;
 	margin-bottom: 0.8em;
 }
@@ -214,7 +214,7 @@ ul {
 }
 
 p + ul, p + ol {
-	margin-top: -0.5em;
+	margin-top: -10.5em;
 }
 
 li ul, li ol {
