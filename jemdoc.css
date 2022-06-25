@@ -21,7 +21,7 @@ body {
 
 #layout-menu {
 	background: #0c1333;
-	border: 1px solid #0c1333;
+	border: none; /*1px solid #0c1333;*/
 	padding-top: 0.0em;
 	padding-left: 0px; 
 	padding-right: 4px;
@@ -366,7 +366,7 @@ table + table {
 
 tr.heading {
     font-weight: bold;
-    border-bottom: none; /*2px solid black; */
+    border-bottom: 2px solid black; 
 }
 
 img {
