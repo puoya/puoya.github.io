@@ -170,7 +170,7 @@ pre {
 
 div#footer {
 	font-size: small;
-	border-top: none; /* 1px solid #c0c0c0;*/
+	border-top: 1px solid #c0c0c0;
 	padding-top: 0.1em;
 	margin-top: 4.0em;
 	color: #c0c0c0;
@@ -257,7 +257,7 @@ div.blocktitle {
 }
 
 div.blockcontent {
-	border: 1px solid silver;
+	border: none; /* 1px solid silver; */
 	padding: 0.3em 0.5em;
 }
 
