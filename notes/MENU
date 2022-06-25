@@ -1,12 +1,13 @@
 \n	
 	home		 				[../index.html]
 \n
-	publication        		[../publication.html]
+	publication        			[../publication.html]
 	teaching 					[../teaching.html]
 	software            		[../software.html]
 \n
 	news						[../news.html]
-    notebook						[../notebook.html]
+    notebook					[../notebook.html]
+    miscellaneous				[../miscellaneous.html]
 
 
 
@@ -14,6 +15,3 @@
 
 
 jemdoc+mathjax [https://github.com/wsshin/jemdoc_mathjax]
-
-\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 
-\n \n \n \n \n \n \n \n \n \n \n \n \n
