@@ -99,11 +99,11 @@ div.menu-item {
 	padding-left: 16px;
 	text-indent: -16px;
 }
-
+/* main pages */
 div#toptitle {
-	padding-bottom: 0.0em;
-	margin-bottom: 0em;
-	margin-top: 90em;
+	padding-bottom: 0.2em;
+	margin-bottom: 1.5em;
+	margin-top: -4.3em;
 	border-bottom: none; /*3px double gray; this was for hiding the top line*/ 
 }
 
