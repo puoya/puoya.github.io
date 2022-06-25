@@ -1,5 +1,5 @@
 # jemdoc: menu{MENU}{notes.html}, nofooter
 = notebook
 \n
-== notebook
+= notebook
 . [notes/RKHS.html *reproducing kernel hilbert space*]\[incomplete\]
