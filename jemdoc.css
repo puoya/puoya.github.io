@@ -72,12 +72,12 @@ a, a > tt {
 }
 
 a:hover {
-	border-bottom: none; /*1px gray dotted;*/
+	border-bottom: 1px gray dotted;
 }
 
 #layout-menu a.current:link, #layout-menu a.current:visited {
 	color: #cacee3;
-	border-bottom: 1px gray solid;
+	border-bottom: none; /*1px gray solid;*/
 }
 #layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
 	color: #cacee3;
