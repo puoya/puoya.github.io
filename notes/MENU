@@ -1,21 +1,19 @@
 \n	
 	home		 				[../index.html]
 \n
-	publications        				[../publication.html]
+	publication        		[../publication.html]
 	teaching 					[../teaching.html]
-	software            				[../software.html]
+	software            		[../software.html]
 \n
 	news						[../news.html]
-    notes						[../notes.html]
-\n
-    	email 						[mailto:tabaghi2@illinois.edu]
+    notebook						[../notebook.html]
 
 
 
 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 
 
 
-jemdoc+MathJax [https://github.com/wsshin/jemdoc_mathjax]
+jemdoc+mathjax [https://github.com/wsshin/jemdoc_mathjax]
 
 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 
 \n \n \n \n \n \n \n \n \n \n \n \n \n
