@@ -142,7 +142,7 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: x-large; /* 165%; */ /* title of each section */ 
+	font-size: 20px; /* 165%; */ /* title of each section */ 
 }
 
 h2 {
