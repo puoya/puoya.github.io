@@ -19,14 +19,14 @@ body {
 	border: none;
 	height: 100vh; /* added by p, this is for the page */
 }
-
+/* this is really menu */
 #layout-menu {
 	background: #0c1333;
 	border: 1px solid #0c1333;
 	padding-top: 0.0em;
 	padding-left: 0px; 
 	padding-right: 4px;
-	font-size: 1.0em;
+	font-size: 100%;
 	width: auto;
 	white-space: nowrap;
     text-align: left;
