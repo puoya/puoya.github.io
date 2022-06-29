@@ -25,7 +25,7 @@ body {
 	border: 1px solid #0c1333;
 	padding-top: 0.0em;
 	padding-left: 0px; 
-	padding-right: 4px;
+	padding-right: 0px;
 	font-size: 0.9em;
 	width: auto;
 	white-space: nowrap;
@@ -55,8 +55,8 @@ body {
 
 #layout-menu a {
 	line-height: 1.5em;
-	margin-left: 2.0em;
-	margin-right: 2.0em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 tt {
