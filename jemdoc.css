@@ -26,7 +26,7 @@ body {
 	padding-top: 0.0em;
 	padding-left: 0px; 
 	padding-right: 4px;
-	font-size: 100%;
+	font-size: 90%;
 	width: auto;
 	white-space: nowrap;
     text-align: left;
@@ -142,12 +142,12 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 165%;
+	font-size: 130%;
 }
 
 h2 {
 	padding-top: 0.8em;
-	font-size: 125%;
+	font-size: 90%;
 }
 
 h2 + h3 {
@@ -155,7 +155,7 @@ h2 + h3 {
 }
 
 h3 {
-	font-size: 110%;
+	font-size: 90%;
 	border-bottom: none;
 }
 
