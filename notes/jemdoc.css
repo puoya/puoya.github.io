@@ -11,7 +11,7 @@ table#tlayout {
 body {
 	background: white;
 	font-family:  Verdana, Arial, Helvetica, sans-serif;
-	font-size: 90%;
+	font-size: 0.9em;
 	padding-bottom: 0px;
 	margin: 0em;
 	margin-left: 0.0em;
@@ -19,14 +19,14 @@ body {
 	border: none;
 	height: 100vh; /* added by p, this is for the page */
 }
-
+/* this is really menu */
 #layout-menu {
 	background: #0c1333;
 	border: 1px solid #0c1333;
 	padding-top: 0.0em;
 	padding-left: 0px; 
-	padding-right: 4px;
-	font-size: 1.0em;
+	padding-right: 0px;
+	font-size: 0.9em;
 	width: auto;
 	white-space: nowrap;
     text-align: left;
@@ -55,8 +55,8 @@ body {
 
 #layout-menu a {
 	line-height: 1.5em;
-	margin-left: 2.0em;
-	margin-right: 2.0em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
 }
 
 tt {
@@ -64,7 +64,7 @@ tt {
 }
 
 pre, tt {
-	font-size: 90%;
+	font-size: 0.9em;
 	font-family:  Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -142,12 +142,12 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 165%;
+	font-size: 1.3em;
 }
 
 h2 {
 	padding-top: 0.8em;
-	font-size: 125%;
+	font-size: 0.90em;
 }
 
 h2 + h3 {
@@ -155,7 +155,7 @@ h2 + h3 {
 }
 
 h3 {
-	font-size: 110%;
+	font-size: 0.90em;
 	border-bottom: none;
 }
 
