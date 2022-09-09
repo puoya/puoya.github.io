@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>basis invariant and permutation equivariant functions</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../index.html">home</a></div>
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../publication.html">publication</a></div>
+<div class="menu-item"><a href="../teaching.html">teaching</a></div>
+<div class="menu-item"><a href="../software.html">software</a></div>
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../news.html">news</a></div>
+<div class="menu-item"><a href="../notebook.html">notebook</a></div>
+<div class="menu-category"><br /></div>
+<div class="menu-item"><a href="../miscellany.html">miscellany</a></div>
+<div class="menu-category"><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /></div>
+<div class="menu-item"><a href="https://github.com/wsshin/jemdoc_mathjax">jemdoc+mathjax</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>basis invariant and permutation equivariant functions</h1>
+<div id="subtitle"><br />
+</div>
+</div>
+<h1>basis invariant and permutation equivariant functions</h1>
+<div class="infoblock">
+<div class="blocktitle"><b>definition</b></div>
+<div class="blockcontent">
+<p>the function \(f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^K\) is basis invariant if and only if \(f(X) = f(X R)\) for all \(X \in \mathbb{R}^{N \times d}\) and \(R \in \mathbb{O}(d)\) &#8201;&mdash;&#8201; the set of \(d \times d\) orthonormal matrices.
+</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle"><b>definition</b></div>
+<div class="blockcontent">
+<p>the function \(f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N\) is permutation equivariant if and only if \(f(\Pi X) = \Pi f(X)\) for all \(X \in \mathbb{R}^{N \times d}\) and \(\Pi \in \Pi(N)\) &#8201;&mdash;&#8201; the set of \(N \times N\) permutation matrices.
+</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle"><b>proposition</b></div>
+<div class="blockcontent">
+<p>let \(X \in \mathbb{R}^{N \times d}\) and \(f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^K\) be a basis invariant function. then \(f(X) =  g( \{x_{1}, \ldots, x_{d} \} )\) where \(g\) is a function that operates on the multiset of \(d\) vectors in \(\mathbb{R}^N\) and outputs a vector in \(\mathbb{R}^K\), \(x_{i}\) is the \(i\)-th column of \(X\) (\(i \in [d]\)).
+</p>
+</div></div>
+<div class="infoblock">
+<div class="blocktitle"><b>proof</b></div>
+<div class="blockcontent">
+<p>by the basis invariant assumption, we have \(f(X) = f(XR)\) for any \(R \in \mathbb{O}(d)\) and \(X \in \mathbb{R}^{N \times d}\). let \(\Pi(d)\) be the set of \(d \times d\) permutation matrices. since \(\Pi \in \Pi(d) \subset O(d)\), we have
+</p>
+<p style="text-align:center">
+\[
+\begin{align*}
+f(X) &amp; = f( X \Pi ) , \ \mbox{where} \ \Pi \in \Pi(d) \\
+&amp;=g( \{ x_1, \ldots, x_d \}),
+\end{align*}
+\]
+</p><p>where \(g\) is a function that operates on the multiset of \(d\) vectors.
+</p>
+</div></div>
+<p>therefore, the function \(g\) can be expressed as follows
+</p>
+<p style="text-align:center">
+\[
+	g( \{ x_1, \ldots, x_d \} ) = \phi(x_1) \star \phi(x_2) \star \cdots \star \phi(x_d), \ \mbox{where} \ \phi:\mathbb{R}^N \rightarrow \mathbb{R}^K,
+\]
+</p><p>and \(\star\) is a commutative and associative operator in \(\mathbb{R}^K\).
+</p>
+<p>now suppose \(f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N\) is both basis invariant and permutation equivariant. let \(X \in \mathbb{R}^{N \times d}\) be a rank-\(d\) sliced unitary matrix such that \(\mathrm{span}\{ e_{n_1}, \ldots, e_{n_d} \} = \mathcal{R}(X)\) for distinct standard basis vectors \(\{ e_{n_i} \}_{i \in [d]}\)'s. then we have
+</p>
+<p style="text-align:center">
+\[
+\begin{align*}
+	\mathcal{R}(\Pi X) =  \mathrm{span}\{ \Pi e_{n_1}, \ldots, \Pi e_{n_d} \} 
+\end{align*}
+\]
+</p><p>therefore, we must have the following property
+</p>
+<p style="text-align:center">
+\[
+\begin{align*}
+f(\Pi X) &amp;= g( \{ \Pi e_{n_1}, \ldots, \Pi e_{n_d}\} ) \\
+&amp;= \Pi g( \{e_{n_1}, \ldots, e_{n_d} \} ) \\
+&amp;= \Pi f(X).
+\end{align*}
+\]
+</p><p>therefore, \(g\) must be a permutation equivariant function.
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>theorem</b></div>
+<div class="blockcontent">
+<p>let \(X \in \mathbb{R}^{N \times d}\) be a matrix of rank \(d\) such that \(X^{\top} X = I_d\) &#8201;&mdash;&#8201; the \(d\times d\) identity matrix. if \(f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N\) is a basis invariant and permutation equivariant function, then \(f(X) =  g( \{e_{n_1}, \ldots, e_{n_d} \} )\) where \(g\) is a permutation equivariant function that operates on the set of \(d\) distinct vectors in \(\mathbb{R}^N\) and outputs a vector in \(\mathbb{R}^N\) and \(\mathrm{span}\{ e_{n_1}, \ldots, e_{n_d} \} = \mathcal{R}(X)\).
+</p>
+</div></div>
+<p>we characterize a basis invariant function \(f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N\) by representing it as \(f(X) = g(X R_x)\) where \(g:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N\) and \(R_x \in \mathbb{O}(d)\) &#8201;&mdash;&#8201; an orthonormal matrix parameterized by \(X\). consequently, the function \(f\) is basis invariant if and only if \(X R_x = XR R_{xr} = Y\). let \(y = [y_1, \ldots, y_d]\) where \(y_i \in \mathbb{R}^{N}\) for \(i \in [d] \). the vector \(y_i\) (\(i \in [d]\)), must belong to the column span of \(X\) &#8201;&mdash;&#8201; or \(\mathcal{R}(X)\). further, we assume that \(X\) is a sliced-unitary matrix, i.e., \(X^{\top} X = I_d\) and \(N &gt; d\). since \(\mathcal{R}(X) = \mathcal{R}(XR)\) for any \(R \in \mathbb{O}(d)\), we may write the following optimization problem to solve for \(y_1\)
+</p>
+<p style="text-align:center">
+\[
+y_1 = \mathrm{argmax}_{y \in \mathcal{R}(X): \| y \|_2 = 1} c(y)
+\]
+</p><p>where \(c: \mathbb{R}^K \rightarrow \mathbb{R}\) is a cost function. we let \(c(y) = \sum_{k \in [K]} y_k\). there are two scenrios: 
+</p>
+<p>(1) \(\exists y \in \mathcal{R}(X): c(y) \neq 0\). then we write the optimization problem as follows 
+</p>
+<p style="text-align:center">
+\[
+y_1 = Xr^* \ \mbox{ where } \ r^* = \mathrm{argmax}_{r \in \mathbb{R}^d: \| r \|_2 = 1} 1^{\top} X r = \|X^{\top} 1 \|^{-1} X^{\top} 1
+\]
+</p><p>therefore, we can uniquely determine the vector \(y_1 = (1^{\top} X X^{\top} 1 )^{-\frac{1}{2}} X X^{\top} 1\). obvisouly, this is invariant to the change of orthonormal basis.
+</p>
+<p>(2) \(\forall y \in \mathcal{R}(X): c(y) = 0\). then we can write \(X = S_{N-1} X_{(1)}\) where
+</p>
+<p style="text-align:center">
+\[
+S_{N-1}  = \begin{bmatrix}p &amp; p &amp; \cdots &amp; p\\1+q &amp; q &amp; \cdots &amp;  q\\q &amp; 1+q &amp; \cdots &amp; q\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\q &amp; q &amp; \cdots &amp; 1+q\end{bmatrix} \in \mathbb{R}^{N \times N-1} \ \mbox{where} \ q = -\frac{1}{\sqrt{N}}, p = -\frac{1}{N+\sqrt{N}}.
+\]
+</p><p>since \(S_{N-1}^{\top}S_{N-1} = I_{N-1}\), we simply have \(X_{(1)} = S_{N-1}^{\top}X\). now we repeat the procedure on \(X^{(1)}\):
+</p>
+<p>(1) \(\exists y \in \mathcal{R}(X_{(1)}): c(y) \neq 0\). then we write the optimization problem as follows 
+</p>
+<p style="text-align:center">
+\[
+r^* = \mathrm{argmax}_{r \in \mathbb{R}^d: \| r \|_2 = 1} 1^{\top} X_{(1)} r = \|X_{(1)}^{\top} 1 \|^{-1} X_{(1)}^{\top} 1
+\]
+</p><p>therefore, we can uniquely determine the vector \(y_1 = (1^{\top} X_{(1)} X_{(1)}^{\top} 1 )^{-\frac{1}{2}} X X_{(1)}^{\top} 1\). obvisouly, this is invariant to the change of orthonormal basis.
+</p>
+<p>(2) \(\forall y \in \mathcal{R}(X_{(1)}): c(y) = 0\). then we can write \(X_{(1)} = S_{N-2} X_{(2)}\). similarly we have \(X_{(2)} = S_{N-2}^{\top}X_{(1)} = S_{N-2}^{\top}S_{N-1}^{\top}X\).
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>fact</b></div>
+<div class="blockcontent">
+<p>if we have
+</p>
+<p style="text-align:center">
+\[
+    \forall k \in [K-1]: c(y) = 0, \forall y \in \mathcal{R}(X_{(k)}).
+\]
+</p><p>then \(X = \big(S_{N-K} \cdots S_{N-1} \big) X_{(K)}\) where \(X_{(K)} \in \mathbb{R}^{(N-K)\times d}\). therefore if, \(\mathrm{rank}(X) = d \) (where \(N &gt; d\)), then
+the following scenario can not happen
+</p>
+<p style="text-align:center">
+\[
+    \forall k \in [K-1]: c(y) = 0, \forall y \in \mathcal{R}(X_{(k)}),
+\]
+</p><p>where \(K &gt; N-d+1\).
+</p>
+</div></div>
+<p>as a result of this fact, \(y_1\) does have a unique solution with this procedure.
+</p>
+<p>for \(y_2\), we want to find a unit norm vector \(r_2\) such that 
+</p>
+<p style="text-align:center">
+\[
+r_2^* = \mathrm{argmax}_{r: \| r\|_2 = 1} \ 1^{T} X_{(k)} r, \ \mbox{s.t.} \ \langle r , r_1 \rangle = 0
+\]
+</p><p>the optimal solution can be written as \(r_2^* = P_{r_1}^{\perp} r_2\). now we can get rid of the inner product constraint and write the cost function as follows
+</p>
+<p style="text-align:center">
+\[
+r^* = \mathrm{argmax}_{r: \| P_{r_1}^{\perp} r\|_2 = 1} \ 1^{T} X_{(k)}P_{r_1}^{\perp} r
+\]
+</p><p>the optimal solution is as follows
+</p>
+<p style="text-align:center">
+\[
+r_2^* = \alpha  P_{r_1}^{\perp}(P_{r_1}^{\perp})^{\top}X_{(k)}^{\top}1
+\]
+</p><p style="text-align:center">
+\[
+r_2^* = \alpha  P_{r_1}^{\perp} X_{(k)}^{\top}1
+\]
+</p><p style="text-align:center">
+\[
+\| P_{r_1}^{\perp} r\|_2 = 1 \rightarrow \alpha^2   1^{\top} X_{(k)} P_{r_1}^{\perp} X_{(k)}^{\top}1 = 1
+\]
+</p><p>\(y_2 = (1^{\top} X_{(k)} P_{r_1}^{\perp}  X_{(k)}^{\top} 1 )^{-\frac{1}{2}} X P_{r_1}^{\perp} X_{(k)}^{\top} 1\).
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
