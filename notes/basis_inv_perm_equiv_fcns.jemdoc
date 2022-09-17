@@ -13,6 +13,8 @@ the function $f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N$ is permutation
 ~~~
 
 
+
+
 ~~~
 {*proposition*}
 let $X \in \mathbb{R}^{N \times d}$ and $f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^K$ be a basis invariant function. then $f(X) =  g( \{x_{1}, \ldots, x_{d} \} )$ where $g$ is a function that operates on the multiset of $d$ vectors in $\mathbb{R}^N$ and outputs a vector in $\mathbb{R}^K$, $x_{i}$ is the $i$-th column of $X$ ($i \in [d]$).
