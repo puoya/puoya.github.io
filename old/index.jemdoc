@@ -1,27 +1,27 @@
 # jemdoc: menu{MENU}{index.html}, nofooter
-
 == puoya tabaghi
 
 ~~~
 {}{img_left}{puoya.jpeg}{alt text}{200vw}{auto}{}
 {{<font style="font-family: Brush Script MT, Cursive, Fantasy, Georgia">}} {{<font style="font-size: 200%">}} *puoya tabaghi* {{</font>}} {{</font>}} \n
 postdoctoral scholar \n 
-[https://datascience.ucsd.edu/ Halıcıoğlu Data Science Institute]  \n
-[https://ucsd.edu University of California San Diego]  \n \n
+[https://datascience.ucsd.edu/ halıcıoğlu data science institute]  \n
+[https://ucsd.edu university of california san diego]  \n \n
 email: [ptabaghi@ucsd.edu]  \n
 address: \n
-(1) 114e [https://g.page/SDSC_UCSanDiego?share San Diego Supercomputer Center] \n 
-\ \ (2) 4301 Collaboratory, [https://fah.ucsd.edu Franklin Antonio Hall] \n \n
+(1) 114e [https://g.page/SDSC_UCSanDiego?share san diego supercomputer center] \n 
+\ \ (2) 4301 collaboratory, [https://fah.ucsd.edu franklin antonio hall] \n \n
 
-[https://github.com/puoya github], [https://orcid.org/0000-0002-1914-5950 orcid], [https://scholar.google.com/citations?user=iH0-74kAAAAJ&hl=en&oi=ao Google Scholar] \n 
-[https://ucsdcloud-my.sharepoint.com/:b:/g/personal/ptabaghi_ucsd_edu/EWlOUJNeYQhHjhnQqcGgzw4BFGCARBlfnw1fjmEusNMLmg?e=O1oxpH]
-curriculum vitae
+[https://github.com/puoya github], [https://orcid.org/0000-0002-1914-5950 orcid], [https://scholar.google.com/citations?user=iH0-74kAAAAJ&hl=en&oi=ao google scholar] \n 
+[https://ucsdcloud-my.sharepoint.com/:b:/g/personal/ptabaghi_ucsd_edu/EWlOUJNeYQhHjhnQqcGgzw4BFGCARBlfnw1fjmEusNMLmg?e=O1oxpH
+curriculum vitae]
 ~~~
 
 == research 
 - computational biology: phylogenomics and metagenomics
 - geometric methods in machine learning
 - statistical learning theory, detection and estimation theory
+
 
 == education 
 - university of illinois at urbana-champaign, usa, 2021
