@@ -55,7 +55,20 @@ MathJax.Hub.Config({
 </li>
 </ol>
 <h2>Usage</h2>
-<p>The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.</p>
+<p>The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
+</p>
+<div class="infoblock">
+<div class="blocktitle"><b>python</b></div>
+<div class="blockcontent">
+<p>from your<u>package import tree</u>collections
+</p>
+<p>tree = tree_collections.Tree('path<i>to</i>treefile.nwk&rsquo;)
+</p>
+<p>import treeswift as ts
+t = ts.read<u>tree</u>newick('path<i>to</i>treefile.nwk&rsquo;)
+tree = tree<u>collections.Tree('Tree</u>Name&rsquo;, t, enable_logging=True)
+</p>
+</div></div>
 </td>
 </tr>
 </table>
