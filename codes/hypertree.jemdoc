@@ -9,3 +9,6 @@ The Tree class supports two modes of initialization:
 
 . From a file path (to load a tree).
 . From an existing treeswift.Tree object with a custom name.
+
+== Usage
+The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
