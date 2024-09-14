@@ -1,0 +1,14 @@
+# jemdoc: menu{MENU}{notes/hypertree.html} nofooter
+= hypertree
+\n
+= hypertree
+
+{*Class Overview*}
+The `MultiEmbedding` class allows for managing and manipulating multiple embeddings efficiently. Embeddings can be added, discarded, and aligned within this class. It is particularly useful when handling embedding data that needs to be grouped under different labels or categories.
+
+This class provides methods to:
+- Add an embedding with a specific label.
+- Remove (discard) embeddings based on their label(s).
+- Align multiple embeddings using custom logic defined in the `align_embeddings` method.
+
+
