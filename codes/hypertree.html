@@ -58,21 +58,14 @@ MathJax.Hub.Config({
 <p>The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
 </p>
 <div class="infoblock">
-<div class="blocktitle"><b>python</b></div>
 <div class="blockcontent">
-<p>&lt;div class=&ldquo;highlight&rdquo;&gt;&lt;pre&gt;&lt;span&gt;&lt;<i>span&gt;&lt;span class=&ldquo;kn&rdquo;&gt;from&lt;</i>span&gt; &lt;span class=&ldquo;nn&rdquo;&gt;your_package&lt;<i>span&gt; &lt;span class=&ldquo;kn&rdquo;&gt;import&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;Tree&lt;/span&gt;
+<p>from your<u>package import tree</u>collections
 </p>
-<p>&lt;span class=&ldquo;c1&rdquo;&gt;
-&lt;span class=&ldquo;n&rdquo;&gt;tree&lt;<i>span&gt; &lt;span class=&ldquo;o&rdquo;&gt;=&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;Tree&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;(&lt;</i>span&gt;&lt;span class=&ldquo;s2&rdquo;&gt;&amp;quot;path<u>to</u>tree_file.tre&amp;quot;&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;)&lt;</i>span&gt;
+<p>tree = tree_collections.Tree('path<i>to</i>treefile.nwk&rsquo;)
 </p>
-<p>&lt;span class=&ldquo;c1&rdquo;&gt;
-&lt;span class=&ldquo;kn&rdquo;&gt;import&lt;<i>span&gt; &lt;span class=&ldquo;nn&rdquo;&gt;treeswift&lt;</i>span&gt; &lt;span class=&ldquo;k&rdquo;&gt;as&lt;<i>span&gt; &lt;span class=&ldquo;nn&rdquo;&gt;ts&lt;</i>span&gt;
-&lt;span class=&ldquo;n&rdquo;&gt;tree<u>obj&lt;<i>span&gt; &lt;span class=&ldquo;o&rdquo;&gt;=&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;ts&lt;<i>span&gt;&lt;span class=&ldquo;o&rdquo;&gt;.&lt;</i>span&gt;&lt;span class=&ldquo;n&rdquo;&gt;read</u>tree<u>newick&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;(&lt;</i>span&gt;&lt;span class=&ldquo;s2&rdquo;&gt;&amp;quot;((A,B),(C,D));&amp;quot;&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;)&lt;</i>span&gt;
-&lt;span class=&ldquo;n&rdquo;&gt;tree&lt;<i>span&gt; &lt;span class=&ldquo;o&rdquo;&gt;=&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;Tree&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;(&lt;</i>span&gt;&lt;span class=&ldquo;s2&rdquo;&gt;&amp;quot;MyTree&amp;quot;&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;,&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;tree</u>obj&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;)&lt;</i>span&gt;
-</p>
-<p>&lt;span class=&ldquo;c1&rdquo;&gt;
-&lt;span class=&ldquo;n&rdquo;&gt;tree<u>with</u>logging&lt;<i>span&gt; &lt;span class=&ldquo;o&rdquo;&gt;=&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;Tree&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;(&lt;</i>span&gt;&lt;span class=&ldquo;s2&rdquo;&gt;&amp;quot;path<u>to</u>tree<u>file.tre&amp;quot;&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;,&lt;</i>span&gt; &lt;span class=&ldquo;n&rdquo;&gt;enable</u>logging&lt;<i>span&gt;&lt;span class=&ldquo;o&rdquo;&gt;=&lt;</i>span&gt;&lt;span class=&ldquo;kc&rdquo;&gt;True&lt;<i>span&gt;&lt;span class=&ldquo;p&rdquo;&gt;)&lt;</i>span&gt;
-&lt;<i>pre&gt;&lt;</i>div&gt;
+<p>import treeswift as ts
+t = ts.read<u>tree</u>newick('path<i>to</i>treefile.nwk&rsquo;)
+tree = tree<u>collections.Tree('Tree</u>Name&rsquo;, t, enable_logging=True)
 </p>
 </div></div>
 </td>
