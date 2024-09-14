@@ -1,14 +1,16 @@
 # jemdoc: menu{MENU}{notes/hypertree.html} nofooter
 = hypertree
 \n
-= Tree Class Documentation
-The `Tree` class is designed to handle phylogenetic tree operations using the `treeswift` package and includes additional utilities for embedding trees in Euclidean or hyperbolic geometries. The class supports loading trees from files or directly from `treeswift.Tree` objects. It also provides logging capabilities and various tree-related functionalities such as distance matrix computation, normalization, and embedding.
 
-== Usage Overview
+= Tree Class Documentation =
 
-The `Tree` class requires either a file path to load a tree or an already constructed `treeswift.Tree` object as input. It provides methods for tree manipulation, such as computing the tree’s distance matrix, normalizing branch lengths, and embedding the tree in a specified geometry.
+The `Tree` class provides methods for managing and manipulating phylogenetic trees using the `treeswift` package. This class allows for distance calculation, embedding in geometric spaces, logging, and visualization.
 
-{verbatim}
-def example_function():
-    print("This is a block of code.")
-{verbatim}
+== Usage ==
+
+The `Tree` class can be initialized in two ways:
+
+1. From a file path to load a tree.
+2. From an existing `treeswift.Tree` object with a custom name.
+
+Example 1: Initialize from a file path
