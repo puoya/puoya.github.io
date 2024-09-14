@@ -2,15 +2,10 @@
 = hypertree
 \n
 
-= Tree Class Documentation =
+= Tree Class Documentation
+The Tree class provides methods for managing and manipulating phylogenetic trees, leveraging the treeswift package for tree handling and embedding into geometric spaces. This class includes functionality for tree distance calculation, embedding in Euclidean and hyperbolic geometries, as well as logging operations and visualization.
 
-The `Tree` class provides methods for managing and manipulating phylogenetic trees using the `treeswift` package. This class allows for distance calculation, embedding in geometric spaces, logging, and visualization.
+The Tree class supports two modes of initialization:
 
-== Usage ==
-
-The `Tree` class can be initialized in two ways:
-
-1. From a file path to load a tree.
-2. From an existing `treeswift.Tree` object with a custom name.
-
-Example 1: Initialize from a file path
+. From a file path (to load a tree).
+. From an existing treeswift.Tree object with a custom name.
