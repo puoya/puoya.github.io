@@ -380,22 +380,3 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
-
-
-
-
-
-code {
-    background-color: #f5f5f5;  /* Light gray background */
-    font-family: monospace;     /* Monospaced font */
-    padding: 2px 4px;           /* Padding around inline code */
-    border-radius: 3px;         /* Rounded corners */
-}
-
-pre {
-    background-color: #f5f5f5;  /* Light gray background */
-    font-family: monospace;     /* Monospaced font */
-    padding: 10px;              /* Padding around the code block */
-    border-radius: 5px;         /* Rounded corners */
-    overflow-x: auto;           /* Scroll for long lines */
-}
