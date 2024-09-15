@@ -754,8 +754,11 @@ def br(b, f, tableblock=False):
   b = mathjaxusresub(b)
  
   # Deal with +monospace+.
-  r = re.compile(r'(?<!\\)\+(.*?)(?<!\\)\+', re.M + re.S)
+  r = re.compile(r'%%(.*?)%%', re.M | re.S)
   b = re.sub(r, r'<tt>\1</tt>', b)
+  
+  # r = re.compile(r'(?<!\\)\+(.*?)(?<!\\)\+', re.M + re.S)
+  # b = re.sub(r, r'<tt>\1</tt>', b)
 
   # Deal with "double quotes".
   r = re.compile(r'(?<!\\)"(.*?)(?<!\\)"', re.M + re.S)
