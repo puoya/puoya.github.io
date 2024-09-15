@@ -381,10 +381,10 @@ def standardconf():
   <div class="blockcontent">
   
   [codeblockcontent]
-  <div class="blockcontent"><pre>
+  <div class="blockcontent"><pre><code class="language-python">
   
   [codeblockend]
-  </pre></div></div>
+  </code></pre></div></div>
   
   [codeblockcontenttt]
   <div class="blockcontent"><tt class="tthl">
