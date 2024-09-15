@@ -32,6 +32,29 @@ from subprocess import *
 from types import *
 import tempfile
 
+##############################################
+import re
+import pygments
+from pygments import highlight
+from pygments.lexers import PythonLexer
+from pygments.formatters import HtmlFormatter
+# Inside your function for handling text or content:
+# Detect +pycode+...+pycode+ blocks
+def replace_code_blocks(b):
+    # Use regex to find code blocks marked with +pycode+...+pycode+
+    r = re.compile(r'\+pycode\+(.+?)\+pycode\+', re.DOTALL)
+    
+    # Substitute each match with highlighted Python code
+    def replacer(match):
+        code = match.group(1)  # Extract the code within the +pycode+...+pycode+ tags
+        highlighted_code = highlight(code, PythonLexer(), HtmlFormatter())
+        return f"<pre>{highlighted_code}</pre>"
+    
+    b = r.sub(replacer, b)
+    return b
+#############################################
+
+
 def info():
   print(__doc__)
   print('Platform: ' + sys.platform + '.')
@@ -141,12 +164,15 @@ def standardconf():
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   
   [defaultcss]
-  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+  <link rel="stylesheet" href="../css/jemdoc.css" type="text/css" />
   
   [windowtitle]
   # used in header for window title.
   <title>|</title>
 
+  <!-- Add the link to pygments.css here -->
+  <link rel="stylesheet" href="../css/pygments.css" type="text/css" />
+  
   [fwtitlestart]
   <div id="fwtitle">
 
@@ -754,8 +780,14 @@ def br(b, f, tableblock=False):
   b = mathjaxusresub(b)
  
   # Deal with +monospace+.
-  r = re.compile(r'(?<!\\)\+(.*?)(?<!\\)\+', re.M + re.S)
+  r = re.compile(r'%%(.*?)%%', re.M | re.S)
   b = re.sub(r, r'<tt>\1</tt>', b)
+  
+  # r = re.compile(r'(?<!\\)\+(.*?)(?<!\\)\+', re.M + re.S)
+  # b = re.sub(r, r'<tt>\1</tt>', b)
+
+  # At this point, we call replace_code_blocks to process +pycode+...+pycode+ blocks
+  b = replace_code_blocks(b)
 
   # Deal with "double quotes".
   r = re.compile(r'(?<!\\)"(.*?)(?<!\\)"', re.M + re.S)

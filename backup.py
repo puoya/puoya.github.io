@@ -170,9 +170,6 @@ def standardconf():
   # used in header for window title.
   <title>|</title>
 
-  <!-- Add the link to pygments.css here -->
-  <link rel="stylesheet" href="../css/pygments.css" type="text/css" />
-  
   [fwtitlestart]
   <div id="fwtitle">
 
