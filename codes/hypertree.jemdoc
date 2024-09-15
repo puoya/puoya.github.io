@@ -18,7 +18,7 @@ The Tree class can be initialized with either a file path or a treeswift.Tree ob
 \+ >>> print 'Interactive Python code.' \+
 
 ~~~
-++ >>> print 'Interactive Python code.' ++
++ >>> print 'Interactive Python code.' +
 ~~~
 
 >>> print 'Interactive Python code.'
