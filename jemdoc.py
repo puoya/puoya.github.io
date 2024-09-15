@@ -291,7 +291,7 @@ def standardconf():
   <link rel="stylesheet" href="../css/jemdoc.css" type="text/css" />
   
   <!-- Include pygments.css for syntax highlighting -->
-  <link rel="stylesheet" href="../css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="pygments.css" type="text/css" />
 
   [windowtitle]
   # used in header for window title.
