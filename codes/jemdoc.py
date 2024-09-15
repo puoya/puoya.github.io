@@ -141,7 +141,7 @@ def standardconf():
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   
   [defaultcss]
-  <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+  <link rel="stylesheet" href="../css/jemdoc.css" type="text/css" />
   
   [windowtitle]
   # used in header for window title.
@@ -754,10 +754,8 @@ def br(b, f, tableblock=False):
   b = mathjaxusresub(b)
  
   # Deal with +monospace+.
-  r = re.compile(r'%%(.*?)%%', re.M | re.S)
-  b = re.sub(r'%%\s*(.*?)\s*%%', r'<code>\1</code>', b)
-
-
+  r = re.compile(r'(?<!\\)\+(.*?)(?<!\\)\+', re.M + re.S)
+  b = re.sub(r, r'<tt>\1</tt>', b)
 
   # Deal with "double quotes".
   r = re.compile(r'(?<!\\)"(.*?)(?<!\\)"', re.M + re.S)
