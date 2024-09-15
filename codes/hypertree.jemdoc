@@ -14,10 +14,10 @@ The Tree class supports two modes of initialization:
 The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
 
 ~~~
-from your_package import tree_collections
+from your\_package import tree_collections
 
 # Example 1: Initialize from a file path
-tree = tree{_}collections.Tree('path/to/treefile.nwk')
+tree = tree_collections.Tree('path/to/treefile.nwk')
 
 # Example 2: Initialize with a name and treeswift.Tree object
 import treeswift as ts
