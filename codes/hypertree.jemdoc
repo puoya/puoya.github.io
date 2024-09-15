@@ -14,10 +14,9 @@ The Tree class supports two modes of initialization:
 The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
 
 ~~~
->>> print "Interactive Python code."
+{jemdoc}>>> print 'Interactive Python code.'
 ~~~
 
-: {jemdoc}
 >>> print 'Interactive Python code.'
 
 from your\_package import tree_collections
