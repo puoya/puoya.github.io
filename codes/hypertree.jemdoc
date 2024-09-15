@@ -18,6 +18,11 @@ def hello_world():
     print("Hello, World!")
 %%endpycode%%
 
+\+
+def hello_world():
+    print("Hello, World!")
+\+
+
 ~~~python
 def my_function():
     print("Hello, world!")
