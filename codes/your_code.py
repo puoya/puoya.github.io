@@ -1,12 +1,15 @@
-from your_package import Tree
+import re
 
-# Example 1: Load tree from a file
-tree = Tree("path_to_tree_file.tre")
+# Sample jemdoc content
+b = """
+The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
 
-# Example 2: Initialize with a treeswift.Tree object
-import treeswift as ts
-tree_obj = ts.read_tree_newick("((A,B),(C,D));")
-tree = Tree("MyTree", tree_obj)
+%% print 'Interactive Python code.' %%
+"""
 
-# Logging can be enabled with the 'enable_logging' parameter
-tree_with_logging = Tree("path_to_tree_file.tre", enable_logging=True)
+# Regular expression to find %%monospace%% and replace with <tt>monospace</tt>
+r = re.compile(r'%%(.*?)%%', re.M | re.S)
+b = re.sub(r, r'<tt>\1</tt>', b)
+
+# Print the result
+print(b)

@@ -755,7 +755,8 @@ def br(b, f, tableblock=False):
  
   # Deal with +monospace+.
   r = re.compile(r'%%(.*?)%%', re.M | re.S)
-  b = re.sub(r, r'<tt>\1</tt>', b)
+  b = re.sub(r'%%\s*(.*?)\s*%%', r'<code>\1</code>', b)
+
 
 
   # Deal with "double quotes".
