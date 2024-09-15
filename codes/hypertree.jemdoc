@@ -17,10 +17,10 @@ The Tree class can be initialized with either a file path or a treeswift.Tree ob
 from your\_package import tree_collections
 
 # Example 1: Initialize from a file path
-tree = tree_collections.Tree('path/to/treefile.nwk')
+tree = tree_collections.Tree('path]\/to\/treefile.nwk')
 
 # Example 2: Initialize with a name and treeswift.Tree object
 import treeswift as ts
-t = ts.read_tree_newick('path/to/treefile.nwk')
-tree = tree_collections.Tree('Tree_Name', t, enable_logging=True)
+t = ts.read\_tree_newick('path\/to\/treefile.nwk')
+tree = tree\_collections.Tree('Tree\_Name', t, enable_logging=True)
 ~~~
