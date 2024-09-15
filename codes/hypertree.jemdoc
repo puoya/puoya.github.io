@@ -13,8 +13,7 @@ The Tree class supports two modes of initialization:
 == Usage
 The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
 
-~~~
-{*Python*}
+: {jemdoc}
 from your\_package import tree_collections
 
 # Example 1: Initialize from a file path
@@ -25,4 +24,3 @@ import treeswift as ts
 
 t = ts.read\_tree\_newick('path\/to\/treefile.nwk')
 tree = tree\_collections.Tree('Tree\_Name', t, enable\_logging=True)
-~~~
