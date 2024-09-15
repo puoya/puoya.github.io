@@ -18,6 +18,11 @@ def hello_world():
     print("Hello, World!")
 %%endpycode%%
 
+~~~python
+def my_function():
+    print("Hello, world!")
+~~~
+
 = Example of Python Code with Syntax Highlighting
 
 This is an example of how to display Python code with syntax highlighting.
