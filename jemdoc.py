@@ -32,13 +32,6 @@ from subprocess import *
 from types import *
 import tempfile
 
-
-###### NEW ######
-from pygments import highlight
-from pygments.lexers import PythonLexer
-from pygments.formatters import HtmlFormatter
-####### NEW ######
-
 def info():
   print(__doc__)
   print('Platform: ' + sys.platform + '.')
@@ -138,146 +131,6 @@ def showhelp():
 
   print(b)
 
-# def standardconf():
-#   a = """[firstbit]
-#   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-#     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-#   <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-#   <head>
-#   <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-#   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-  
-#   [defaultcss]
-#   <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-
-#   [windowtitle]
-#   # used in header for window title.
-#   <title>|</title>
-
-#   [fwtitlestart]
-#   <div id="fwtitle">
-
-#   [fwtitleend]
-#   </div>
-  
-#   [doctitle]
-#   # used at top of document.
-#   <div id="toptitle">
-#   <h1>|</h1>
-  
-#   [subtitle]
-#   <div id="subtitle">|</div>
-  
-#   [doctitleend]
-#   </div>
-  
-#   [bodystart]
-#   </head>
-#   <body>
-  
-#   [analytics]
-#   <script type="text/javascript">
-#   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-#   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-#   </script>
-#   <script type="text/javascript">
-#   try {
-#       var pageTracker = _gat._getTracker("|");
-#       pageTracker._trackPageview();
-#   } catch(err) {}</script>
-  
-#   [menustart]
-#   <table summary="Table for page layout." id="tlayout">
-#   <tr valign="top">
-#   <td id="layout-menu">
-  
-#   [menuend]
-#   </td>
-#   <td id="layout-content">
-  
-#   [menucategory]
-#   <div class="menu-category">|</div>
-
-#   [menuitem]
-#   <div class="menu-item"><a href="|1"|3>|2</a></div>
-
-#   [specificcss]
-#   <link rel="stylesheet" href="|" type="text/css" />
-
-#   [specificjs]
-#   <script src="|.js" type="text/javascript"></script>
-  
-#   [currentmenuitem]
-#   <div class="menu-item"><a href="|1" class="current"|3>|2</a></div>
-  
-#   [nomenu]
-#   <div id="layout-content">
-  
-#   [menulastbit]
-#   </td>
-#   </tr>
-#   </table>
-  
-#   [nomenulastbit]
-#   </div>
-  
-#   [bodyend]
-#   </body>
-#   </html>
-  
-#   [infoblock]
-#   <div class="infoblock">
-  
-#   [codeblock]
-#   <div class="codeblock">
-  
-#   [blocktitle]
-#   <div class="blocktitle">|</div>
-  
-#   [infoblockcontent]
-#   <div class="blockcontent">
-  
-#   [codeblockcontent]
-#   <div class="blockcontent"><pre>
-  
-#   [codeblockend]
-#   </pre></div></div>
-  
-#   [codeblockcontenttt]
-#   <div class="blockcontent"><tt class="tthl">
-  
-#   [codeblockendtt]
-#   </tt></div></div>
-  
-#   [infoblockend]
-#   </div></div>
-  
-#   [footerstart]
-#   <div id="footer">
-#   <div id="footer-text">
-  
-#   [footerend]
-#   </div>
-#   </div>
-  
-#   [lastupdated]
-#   Page generated |, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
-
-#   [sourcelink]
-#   (<a href="|">source</a>)
-
-#   """
-#   b = ''
-#   for l in a.splitlines(True):
-#     if l.startswith('  #'):
-#         continue
-#     elif l.startswith('  '):
-#       b += l[2:]
-#     else:
-#       b += l
-
-#   return b
-
 def standardconf():
   a = """[firstbit]
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -289,10 +142,7 @@ def standardconf():
   
   [defaultcss]
   <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-
-  <!-- Add Pygments CSS for syntax highlighting -->
-  <link rel="stylesheet" href="pygments.css" type="text/css" />
-
+  
   [windowtitle]
   # used in header for window title.
   <title>|</title>
@@ -1369,27 +1219,19 @@ def codeblock(f, g):
         else:
           language(f.outf, l, gethl(g[1]))
 
-  ########### NEW ###################
-  if g[1] == 'python':
-    code_string = '\n'.join(code_block)
-    # Highlight Python code using Pygments
-    highlighted_code = highlight(code_string, PythonLexer(), HtmlFormatter())
-    out(f.outf, highlighted_code)
-  else:
-    ########### NEW ###################
-    if raw:
-      return
-    elif ext_prog:
-      print('filtering through %s...' % ext_prog)
+  if raw:
+    return
+  elif ext_prog:
+    print('filtering through %s...' % ext_prog)
 
-      output,_ = Popen(ext_prog, shell=True, stdin=PIPE,
-                       stdout=PIPE).communicate(buff)
-      out(f.outf, output)
+    output,_ = Popen(ext_prog, shell=True, stdin=PIPE,
+                     stdout=PIPE).communicate(buff)
+    out(f.outf, output)
+  else:
+    if g[1] == 'jemdoc':
+      out(f.outf, f.conf['codeblockendtt'])
     else:
-      if g[1] == 'jemdoc':
-        out(f.outf, f.conf['codeblockendtt'])
-      else:
-        out(f.outf, f.conf['codeblockend'])
+      out(f.outf, f.conf['codeblockend'])
 
 def prependnbsps(l):
   g = re.search('(^ *)(.*)', l).groups()
