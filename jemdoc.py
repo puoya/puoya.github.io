@@ -172,7 +172,7 @@ def standardconf():
   <title>|</title>
 
   <!-- Add the link to pygments.css here -->
-  <link rel="stylesheet" href="../css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="pygments.css" type="text/css" />
   
   [fwtitlestart]
   <div id="fwtitle">
