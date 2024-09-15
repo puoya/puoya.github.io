@@ -1353,38 +1353,76 @@ def codeblock(f, g):
       continue
 
     # jem revise pyint out of the picture.
+    # if g[1] == 'pyint':
+    #   pyint(f.outf, l)
+    # else:
+    #   if raw:
+    #     out(f.outf, l)
+    #   elif g[1] == 'jemdoc':
+    #     # doing this more nicely needs python 2.5.
+    #     for x in ('#', '~', '>>>', '\~', '{'):
+    #       if str(l).lstrip().startswith(x):
+    #         out(f.outf, '</tt><pre class="tthl">')
+    #         out(f.outf, l + '</pre><tt class="tthl">')
+    #         break
+    #     else:
+    #       for x in (':', '.', '-'):
+    #         if str(l).lstrip().startswith(x):
+    #           out(f.outf, '<br />' + prependnbsps(l))
+    #           break
+    #       else:
+    #         if str(l).lstrip().startswith('='):
+    #           out(f.outf, prependnbsps(l) + '<br />')
+    #         else:
+    #           out(f.outf, l)
+    #   else:
+    #     if l.startswith('\\#include{') or l.startswith('\\#includeraw{'):
+    #       out(f.outf, l[1:])
+    #     elif l.startswith('#') and doincludes(f, l[1:]):
+    #       continue
+    #     elif g[1] in ('python', 'py') and l.strip().startswith('"""'):
+    #       out(f.outf, '<span class="string">' + l)
+    #       stringmode = True
+    #     else:
+    #       language(f.outf, l, gethl(g[1]))
+    
     if g[1] == 'pyint':
       pyint(f.outf, l)
     else:
-      if raw:
-        out(f.outf, l)
-      elif g[1] == 'jemdoc':
-        # doing this more nicely needs python 2.5.
-        for x in ('#', '~', '>>>', '\~', '{'):
-          if str(l).lstrip().startswith(x):
-            out(f.outf, '</tt><pre class="tthl">')
-            out(f.outf, l + '</pre><tt class="tthl">')
-            break
-        else:
-          for x in (':', '.', '-'):
-            if str(l).lstrip().startswith(x):
-              out(f.outf, '<br />' + prependnbsps(l))
-              break
-          else:
-            if str(l).lstrip().startswith('='):
-              out(f.outf, prependnbsps(l) + '<br />')
+        if raw:
+            out(f.outf, l)
+        elif g[1] == 'jemdoc':
+            # Doing this more nicely needs Python 2.5.
+            # Adjust handling for code blocks
+            if str(l).lstrip().startswith('~~~'):
+                # Open the code block with <pre> and <code> tags, and add the language class
+                out(f.outf, '<pre><code class="language-python">')
+            elif str(l).lstrip().endswith('~~~'):
+                # Close the code block
+                out(f.outf, '</code></pre>')
             else:
-              out(f.outf, l)
-      else:
-        if l.startswith('\\#include{') or l.startswith('\\#includeraw{'):
-          out(f.outf, l[1:])
-        elif l.startswith('#') and doincludes(f, l[1:]):
-          continue
-        elif g[1] in ('python', 'py') and l.strip().startswith('"""'):
-          out(f.outf, '<span class="string">' + l)
-          stringmode = True
+                # Handle line breaks and other non-code content
+                for x in (':', '.', '-'):
+                    if str(l).lstrip().startswith(x):
+                        out(f.outf, '<br />' + prependnbsps(l))
+                        break
+                else:
+                    if str(l).lstrip().startswith('='):
+                        out(f.outf, prependnbsps(l) + '<br />')
+                    else:
+                        out(f.outf, l)
         else:
-          language(f.outf, l, gethl(g[1]))
+            # Handle raw text, include statements, and other conditions
+            if l.startswith('\\#include{') or l.startswith('\\#includeraw{'):
+                out(f.outf, l[1:])
+            elif l.startswith('#') and doincludes(f, l[1:]):
+                continue
+            elif g[1] in ('python', 'py') and l.strip().startswith('"""'):
+                # Handle Python docstrings
+                out(f.outf, '<span class="string">' + l)
+                stringmode = True
+            else:
+                language(f.outf, l, gethl(g[1]))
 
   if raw:
     return
