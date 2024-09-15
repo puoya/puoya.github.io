@@ -13,10 +13,10 @@ The Tree class supports two modes of initialization:
 == Usage
 The Tree class can be initialized with either a file path or a treeswift.Tree object, along with an optional parameter to enable logging.
 
-+pycode+
+%%pycode%%
 def hello_world():
     print("Hello, World!")
-+pycode+
+%%endpycode%%
 
 
 %% print 'Interactive Python code.' %%

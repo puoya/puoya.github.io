@@ -33,24 +33,24 @@ from types import *
 import tempfile
 
 ##############################################
-import re
 import pygments
 from pygments import highlight
 from pygments.lexers import PythonLexer
 from pygments.formatters import HtmlFormatter
-# Inside your function for handling text or content:
-# Detect +pycode+...+pycode+ blocks
+
 def replace_code_blocks(b):
-    # Use regex to find code blocks marked with +pycode+...+pycode+
-    r = re.compile(r'\+pycode\+(.+?)\+pycode\+', re.DOTALL)
+    # Define regex to find the custom code block delimiters
+    code_pattern = re.compile(r'%%pycode%%(.*?)%%endpycode%%', re.M | re.S)
     
-    # Substitute each match with highlighted Python code
-    def replacer(match):
-        code = match.group(1)  # Extract the code within the +pycode+...+pycode+ tags
+    # Function to replace code block with highlighted HTML
+    def highlight_code(match):
+        code = match.group(1)  # Get the code block content
+        # Use Pygments to highlight the code
         highlighted_code = highlight(code, PythonLexer(), HtmlFormatter())
-        return f"<pre>{highlighted_code}</pre>"
+        return highlighted_code
     
-    b = r.sub(replacer, b)
+    # Replace all code blocks in the body with highlighted code
+    b = code_pattern.sub(highlight_code, b)
     return b
 #############################################
 
