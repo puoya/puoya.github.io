@@ -21,6 +21,7 @@ tree = tree_collections.Tree('path]\/to\/treefile.nwk')
 
 # Example 2: Initialize with a name and treeswift.Tree object
 import treeswift as ts
+
 t = ts.read\_tree\_newick('path\/to\/treefile.nwk')
 tree = tree\_collections.Tree('Tree\_Name', t, enable\_logging=True)
 ~~~
