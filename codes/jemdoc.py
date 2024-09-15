@@ -37,19 +37,20 @@ import pygments
 from pygments import highlight
 from pygments.lexers import PythonLexer
 from pygments.formatters import HtmlFormatter
+import re
 
 def replace_code_blocks(b):
-    # Define regex to find the custom code block delimiters
+    # Define a regex to find the custom code block delimiters (%%pycode%% to %%endpycode%%)
     code_pattern = re.compile(r'%%pycode%%(.*?)%%endpycode%%', re.M | re.S)
-    
-    # Function to replace code block with highlighted HTML
+
+    # Function to replace code block with highlighted HTML using Pygments
     def highlight_code(match):
-        code = match.group(1)  # Get the code block content
+        code = match.group(1)  # Get the code block content between %%pycode%% and %%endpycode%%
         # Use Pygments to highlight the code
         highlighted_code = highlight(code, PythonLexer(), HtmlFormatter())
         return highlighted_code
-    
-    # Replace all code blocks in the body with highlighted code
+
+    # Replace all code blocks in the body text with highlighted code
     b = code_pattern.sub(highlight_code, b)
     return b
 #############################################
