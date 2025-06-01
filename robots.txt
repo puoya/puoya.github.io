@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://puoya.github.io/sitemap.xml
