@@ -1,0 +1,136 @@
+# jemdoc: menu{MENU}{notes/basis_inv_perm_equiv_fcns.html} nofooter
+= basis invariant and permutation equivariant functions
+\n
+= basis invariant and permutation equivariant functions
+~~~
+{*definition*}
+the function $f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^K$ is basis invariant if and only if $f(X) = f(X R)$ for all $X \in \mathbb{R}^{N \times d}$ and $R \in \mathbb{O}(d)$ --- the set of $d \times d$ orthonormal matrices.
+~~~
+
+~~~
+{*definition*}
+the function $f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N$ is permutation equivariant if and only if $f(\Pi X) = \Pi f(X)$ for all $X \in \mathbb{R}^{N \times d}$ and $\Pi \in \Pi(N)$ --- the set of $N \times N$ permutation matrices.
+~~~
+
+
+
+
+~~~
+{*proposition*}
+let $X \in \mathbb{R}^{N \times d}$ and $f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^K$ be a basis invariant function. then $f(X) =  g( \{x_{1}, \ldots, x_{d} \} )$ where $g$ is a function that operates on the multiset of $d$ vectors in $\mathbb{R}^N$ and outputs a vector in $\mathbb{R}^K$, $x_{i}$ is the $i$-th column of $X$ ($i \in [d]$).
+~~~
+
+~~~
+{*proof*}
+by the basis invariant assumption, we have $f(X) = f(XR)$ for any $R \in \mathbb{O}(d)$ and $X \in \mathbb{R}^{N \times d}$. let $\Pi(d)$ be the set of $d \times d$ permutation matrices. since $\Pi \in \Pi(d) \subset O(d)$, we have
+
+\(
+\begin{align*}
+f(X) & = f( X \Pi ) , \ \mbox{where} \ \Pi \in \Pi(d) \\
+&=g( \{ x_1, \ldots, x_d \}),
+\end{align*}
+\)
+where $g$ is a function that operates on the multiset of $d$ vectors.
+~~~
+
+therefore, the function $g$ can be expressed as follows
+
+\(
+	g( \{ x_1, \ldots, x_d \} ) = \phi(x_1) \star \phi(x_2) \star \cdots \star \phi(x_d), \ \mbox{where} \ \phi:\mathbb{R}^N \rightarrow \mathbb{R}^K,
+\)
+and $\star$ is a commutative and associative operator in $\mathbb{R}^K$.
+
+now suppose $f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N$ is both basis invariant and permutation equivariant. let $X \in \mathbb{R}^{N \times d}$ be a rank-$d$ sliced unitary matrix such that $\mathrm{span}\{ e_{n_1}, \ldots, e_{n_d} \} = \mathcal{R}(X)$ for distinct standard basis vectors $\{ e_{n_i} \}_{i \in [d]}$'s. then we have
+
+\(
+\begin{align*}
+	\mathcal{R}(\Pi X) =  \mathrm{span}\{ \Pi e_{n_1}, \ldots, \Pi e_{n_d} \} 
+\end{align*}
+\)
+therefore, we must have the following property
+\(
+\begin{align*}
+f(\Pi X) &= g( \{ \Pi e_{n_1}, \ldots, \Pi e_{n_d}\} ) \\
+&= \Pi g( \{e_{n_1}, \ldots, e_{n_d} \} ) \\
+&= \Pi f(X).
+\end{align*}
+\)
+therefore, $g$ must be a permutation equivariant function.
+
+~~~
+{*theorem*}
+let $X \in \mathbb{R}^{N \times d}$ be a matrix of rank $d$ such that $X^{\top} X = I_d$ --- the $d\times d$ identity matrix. if $f: \mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N$ is a basis invariant and permutation equivariant function, then $f(X) =  g( \{e_{n_1}, \ldots, e_{n_d} \} )$ where $g$ is a permutation equivariant function that operates on the set of $d$ distinct vectors in $\mathbb{R}^N$ and outputs a vector in $\mathbb{R}^N$ and $\mathrm{span}\{ e_{n_1}, \ldots, e_{n_d} \} = \mathcal{R}(X)$.
+~~~
+
+
+we characterize a basis invariant function $f:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N$ by representing it as $f(X) = g(X R_x)$ where $g:\mathbb{R}^{N \times d} \rightarrow \mathbb{R}^N$ and $R_x \in \mathbb{O}(d)$ --- an orthonormal matrix parameterized by $X$. consequently, the function $f$ is basis invariant if and only if $X R_x = XR R_{xr} = Y$. let $y = [y_1, \ldots, y_d]$ where $y_i \in \mathbb{R}^{N}$ for $i \in [d] $. the vector $y_i$ ($i \in [d]$), must belong to the column span of $X$ --- or $\mathcal{R}(X)$. further, we assume that $X$ is a sliced-unitary matrix, i.e., $X^{\top} X = I_d$ and $N > d$. since $\mathcal{R}(X) = \mathcal{R}(XR)$ for any $R \in \mathbb{O}(d)$, we may write the following optimization problem to solve for $y_1$
+
+\(
+y_1 = \mathrm{argmax}_{y \in \mathcal{R}(X): \| y \|_2 = 1} c(y)
+\)
+where $c: \mathbb{R}^K \rightarrow \mathbb{R}$ is a cost function. we let $c(y) = \sum_{k \in [K]} y_k$. there are two scenrios: 
+
+(1) $\exists y \in \mathcal{R}(X): c(y) \neq 0$. then we write the optimization problem as follows 
+\(
+y_1 = Xr^* \ \mbox{ where } \ r^* = \mathrm{argmax}_{r \in \mathbb{R}^d: \| r \|_2 = 1} 1^{\top} X r = \|X^{\top} 1 \|^{-1} X^{\top} 1
+\)
+therefore, we can uniquely determine the vector $y_1 = (1^{\top} X X^{\top} 1 )^{-\frac{1}{2}} X X^{\top} 1$. obvisouly, this is invariant to the change of orthonormal basis.
+
+(2) $\forall y \in \mathcal{R}(X): c(y) = 0$. then we can write $X = S_{N-1} X_{(1)}$ where
+\(
+S_{N-1}  = \begin{bmatrix}p & p & \cdots & p\\1+q & q & \cdots &  q\\q & 1+q & \cdots & q\\ \vdots & \vdots & \ddots & \vdots\\q & q & \cdots & 1+q\end{bmatrix} \in \mathbb{R}^{N \times N-1} \ \mbox{where} \ q = -\frac{1}{\sqrt{N}}, p = -\frac{1}{N+\sqrt{N}}.
+\)
+since $S_{N-1}^{\top}S_{N-1} = I_{N-1}$, we simply have $X_{(1)} = S_{N-1}^{\top}X$. now we repeat the procedure on $X^{(1)}$:
+
+
+(1) $\exists y \in \mathcal{R}(X_{(1)}): c(y) \neq 0$. then we write the optimization problem as follows 
+\(
+r^* = \mathrm{argmax}_{r \in \mathbb{R}^d: \| r \|_2 = 1} 1^{\top} X_{(1)} r = \|X_{(1)}^{\top} 1 \|^{-1} X_{(1)}^{\top} 1
+\)
+therefore, we can uniquely determine the vector $y_1 = (1^{\top} X_{(1)} X_{(1)}^{\top} 1 )^{-\frac{1}{2}} X X_{(1)}^{\top} 1$. obvisouly, this is invariant to the change of orthonormal basis.
+
+(2) $\forall y \in \mathcal{R}(X_{(1)}): c(y) = 0$. then we can write $X_{(1)} = S_{N-2} X_{(2)}$. similarly we have $X_{(2)} = S_{N-2}^{\top}X_{(1)} = S_{N-2}^{\top}S_{N-1}^{\top}X$.
+
+
+~~~
+{*fact*}
+if we have
+\(
+    \forall k \in [K-1]: c(y) = 0, \forall y \in \mathcal{R}(X_{(k)}).
+\)
+then $X = \big(S_{N-K} \cdots S_{N-1} \big) X_{(K)}$ where $X_{(K)} \in \mathbb{R}^{(N-K)\times d}$. therefore if, $\mathrm{rank}(X) = d $ (where $N > d$), then
+the following scenario can not happen
+\(
+    \forall k \in [K-1]: c(y) = 0, \forall y \in \mathcal{R}(X_{(k)}),
+\)
+where $K > N-d+1$.
+~~~
+
+as a result of this fact, $y_1$ does have a unique solution with this procedure.
+
+for $y_2$, we want to find a unit norm vector $r_2$ such that 
+\(
+r_2^* = \mathrm{argmax}_{r: \| r\|_2 = 1} \ 1^{T} X_{(k)} r, \ \mbox{s.t.} \ \langle r , r_1 \rangle = 0
+\)
+the optimal solution can be written as $r_2^* = P_{r_1}^{\perp} r_2$. now we can get rid of the inner product constraint and write the cost function as follows
+\(
+r^* = \mathrm{argmax}_{r: \| P_{r_1}^{\perp} r\|_2 = 1} \ 1^{T} X_{(k)}P_{r_1}^{\perp} r
+\)
+the optimal solution is as follows
+\(
+r_2^* = \alpha  P_{r_1}^{\perp}(P_{r_1}^{\perp})^{\top}X_{(k)}^{\top}1
+\)
+\(
+r_2^* = \alpha  P_{r_1}^{\perp} X_{(k)}^{\top}1
+\)
+\(
+\| P_{r_1}^{\perp} r\|_2 = 1 \rightarrow \alpha^2   1^{\top} X_{(k)} P_{r_1}^{\perp} X_{(k)}^{\top}1 = 1
+\)
+
+$y_2 = (1^{\top} X_{(k)} P_{r_1}^{\perp}  X_{(k)}^{\top} 1 )^{-\frac{1}{2}} X P_{r_1}^{\perp} X_{(k)}^{\top} 1$.
+
+#=== References
+#. [http://maxim.ece.illinois.edu/teaching/SLT/ Bruce Hajek and Maxim Raginsky. Lecture notes for ECE 543, Statistical Learning Theory.]
+
+
+

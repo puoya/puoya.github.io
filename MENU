@@ -1,14 +1,15 @@
-Research-Group-Name
-    Home            [/index.html]
-    Members         [/members.html]
-    Teaching	    [/teaching.html]	
-    News            [/news.html]
-	
-Research
-    Active Topics   [/research.html]
-    Publications    [/publications.html]
-    Software        [/software.html]
+\n	
+	home		 				[index.html]
+\n
+	publication        			[publication.html]
+	teaching 					[teaching.html]
+	software            		[software.html]
+\n
+	news						[news.html]
+    notebook					[notebook.html]
+\n 
+    miscellany				[miscellany.html]
 
-Contacts
-    Contact us      [/contacts.html]
-	
+\n \n \n
+
+jemdoc+mathjax [https://github.com/wsshin/jemdoc_mathjax]
