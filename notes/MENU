@@ -1,18 +1,15 @@
 \n	
-	home		 				[../index.html]
+	Home		 				[index.html]
 \n
-	publication        			[../publication.html]
-	teaching 					[../teaching.html]
-	software            		[../software.html]
+	Publications        		[publications.html]
+	Teaching 					[teaching.html]
+	Software            		[software.html]
 \n
-	news						[../news.html]
-    notebook					[../notebook.html]
-\n
-    miscellany				[../miscellany.html]
+	News						[news.html]
+    Notebook					[notebook.html]
+\n 
+    Miscellany				[miscellany.html]
 
+\n \n \n
 
-
-\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n 
-
-
-jemdoc+mathjax [https://github.com/wsshin/jemdoc_mathjax]
+jemdoc+MathJax [https://github.com/wsshin/jemdoc_mathjax]
