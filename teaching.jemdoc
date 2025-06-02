@@ -1,11 +1,11 @@
 # jemdoc: menu{MENU}{teaching.html}, nofooter
-= teaching
-\n
-= teaching
-\n
-- \[wi \'24\] [https://podcast.ucsd.edu/watch/wi24/dsc40b_b00 dsc 40b: theoretical foundations of data science ii], ucsd
-- \[fa \'22\] [https://dsc10.com dsc 10: principles of data science], ucsd
-- \[fa \'18\] ece 534: random processes, uiuc
-- \[sp \'14\] digital signal processing, aut
-- \[fa \'13\] digital signal processing, aut
-- \[fa \'13\] communication systems, aut
+= Teaching
+
+I have taught the following courses:
+
+- \[WI '24\] [https://podcast.ucsd.edu/watch/wi24/dsc40b_b00 DSC 40B: Theoretical Foundations of Data Science II], UCSD
+- \[FA '22\] [https://dsc10.com DSC 10: Principles of Data Science], UCSD  
+- \[FA '18\] ECE 534: Random Processes, UIUC
+- \[SP '14\] Digital Signal Processing, AUT
+- \[FA '13\] Digital Signal Processing, AUT
+- \[FA '13\] Communication Systems, AUT
