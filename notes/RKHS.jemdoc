@@ -12,7 +12,6 @@ RKHSs form the mathematical foundation for many modern techniques, including ker
 
 Roughly speaking, an RKHS is a space of functions $f : \mathcal{X} \to \mathbb{R}$ (or $\mathbb{C}$) such that evaluating $f$ at a point $x$ behaves linearly and continuously with respect to the geometry of the space.
 
----
 
 == Motivation and Intuition
 
@@ -23,8 +22,6 @@ An RKHS provides a unified framework for doing both:
 - It is a **Hilbert space of functions** with a defined inner product $\langle \cdot, \cdot \rangle_{\mathcal{H}}$.
 - It has a **kernel function** $k(x, y)$ that measures similarity between points in $\mathcal{X}$.
 - The kernel acts as a *bridge* between data points and functions, ensuring that for every $x$, there exists a special function $k(\cdot, x)$ representing evaluation at $x$.
-
----
 
 == Formal Definition
 
@@ -42,7 +39,6 @@ such that:
 
 The function $k$ is called the **reproducing kernel** of $\mathcal{H}$.
 
----
 
 == Key Properties
 
@@ -55,7 +51,6 @@ The function $k$ is called the **reproducing kernel** of $\mathcal{H}$.
 - **Uniqueness:** Every RKHS has a unique reproducing kernel.
 - **Existence:** Conversely, every positive-definite kernel corresponds to a unique RKHS.
 
----
 
 == Examples of Kernels
 
@@ -77,7 +72,6 @@ The function $k$ is called the **reproducing kernel** of $\mathcal{H}$.
 5. **Exponential and Laplacian kernels:**  
    Examples include $k(x, y) = \exp(-\|x - y\| / \sigma)$, producing less smooth function spaces.
 
----
 
 == Constructing an RKHS from a Kernel
 
@@ -95,7 +89,6 @@ Given a positive-definite kernel $k$, we can *construct* the corresponding RKHS 
 
 This procedure ensures the reproducing property holds automatically.
 
----
 
 == The Reproducing Property in Depth
 
@@ -107,7 +100,6 @@ Intuitively, $k(\cdot, x)$ acts like a *probe function* that extracts the value 
 
 This property guarantees that function evaluation is a *continuous linear functional*, meaning the act of "plugging in" $x$ does not destroy smoothness or boundedness within the space.
 
----
 
 == Geometric Viewpoint
 
@@ -128,7 +120,6 @@ $$
 
 This interpretation explains the *kernel trick*: we can compute inner products in a high- or infinite-dimensional feature space without ever constructing $\Phi$ explicitly.
 
----
 
 == Connection to Machine Learning
 
@@ -145,7 +136,6 @@ $$
 
 This result is fundamental: it transforms potentially infinite-dimensional problems into finite-dimensional linear algebra.
 
----
 
 == Gaussian Processes and RKHS
 
@@ -155,7 +145,6 @@ Given a kernel $k$, a GP assumes that any finite set of function values has a jo
 The RKHS associated with the kernel $k$ captures the “mean-square smoothness” of functions sampled from the GP prior.  
 In fact, the RKHS norm provides a measure of how "complex" a function is relative to the GP — functions with small RKHS norm are more likely under the prior.
 
----
 
 == Examples and Exercises
 
@@ -164,7 +153,6 @@ In fact, the RKHS norm provides a measure of how "complex" a function is relativ
 3. Compute the RKHS norm for a linear function in the linear kernel space.  
 4. Using the representer theorem, derive the form of the solution in kernel ridge regression.
 
----
 
 == Indefinite Kernels and Reproducing Kernel Kreĭn Spaces (RKKS)
 
@@ -186,7 +174,6 @@ where $k = k_+ - k_-$ and both $k_+$, $k_-$ are positive-definite kernels.
 While RKKSs retain a form of the reproducing property, many geometric intuitions (like distances) must be reinterpreted carefully.  
 Nonetheless, RKKS theory provides valuable tools for working with indefinite similarities and extensions of kernel methods.
 
----
 
 == Summary
 
@@ -199,7 +186,6 @@ Nonetheless, RKKS theory provides valuable tools for working with indefinite sim
 | Machine learning link | Kernel trick and representer theorem |
 | Indefinite generalization | Reproducing Kernel Kreĭn Space (RKKS) |
 
----
 
 == Further Reading
 
@@ -207,8 +193,6 @@ Nonetheless, RKKS theory provides valuable tools for working with indefinite sim
 - Berlinet, A. & Thomas-Agnan, C. (2004). *Reproducing Kernel Hilbert Spaces in Probability and Statistics*. Springer.
 - Steinwart, I. & Christmann, A. (2008). *Support Vector Machines*. Springer.
 - Schölkopf, B. & Smola, A. (2002). *Learning with Kernels*. MIT Press.
-
----
 
 == Closing Remarks
 
