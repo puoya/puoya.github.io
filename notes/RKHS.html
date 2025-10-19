@@ -50,3 +50,197 @@ This simple yet powerful property connects geometry, functional analysis, and co
 </p>
 <p>Roughly speaking, an RKHS is a space of functions \(f : \mathcal{X} \to \mathbb{R}\) (or \(\mathbb{C}\)) such that evaluating \(f\) at a point \(x\) behaves linearly and continuously with respect to the geometry of the space.
 </p>
+<h2>Motivation and Intuition</h2>
+<p>Imagine you have a space of functions—say, smooth curves or square-integrable functions. 
+In many practical problems, we want to <b>measure similarity</b> between such functions, and sometimes also between <b>points</b> in the input space \(\mathcal{X}\).
+</p>
+<p>An RKHS provides a unified framework for doing both:
+</p>
+<ul>
+<li><p>It is a <b></b>Hilbert space of functions<b></b> with a defined inner product \(\langle \cdot, \cdot \rangle_{\mathcal{H}}\).
+</p>
+</li>
+<li><p>It has a <b></b>kernel function<b></b> \(k(x, y)\) that measures similarity between points in \(\mathcal{X}\).
+</p>
+</li>
+<li><p>The kernel acts as a <b>bridge</b> between data points and functions, ensuring that for every \(x\), there exists a special function \(k(\cdot, x)\) representing evaluation at \(x\).
+</p>
+</li>
+</ul>
+<h2>Formal Definition</h2>
+<p>Let \(\mathcal{X}\) be a nonempty set. A Hilbert space \(\mathcal{H}\) of functions \(f : \mathcal{X} \to \mathbb{R}\) is called a <b></b>Reproducing Kernel Hilbert Space<b></b> if there exists a function
+\(\)
+k : mathcal{X} times mathcal{X} to mathbb{R}
+\(\)
+such that:
+</p>
+<p>1. For each fixed \(x \in \mathcal{X}\), the function \(k(\cdot, x)\) belongs to \(\mathcal{H}\).
+2. (<b></b>Reproducing property<b></b>) For every \(f \in \mathcal{H}\) and \(x \in \mathcal{X}\),
+\(\)
+f(x) = langle f, k(cdot, x) rangle_{mathcal{H}}.
+\(\)
+</p>
+<p>The function \(k\) is called the <b></b>reproducing kernel<b></b> of \(\mathcal{H}\).
+</p>
+<h2>Key Properties</h2>
+<ul>
+<li><p><b></b>Symmetry:<b></b> \(k(x, y) = k(y, x)\) for all \(x, y \in \mathcal{X}\).
+</p>
+</li>
+<li><p><b></b>Positive definiteness:<b></b> For any finite set \(\{x_1, \dots, x_n\} \subset \mathcal{X}\) and any real numbers \(c_1, \dots, c_n\),
+\(\)
+sum<u>{i,j=1}^{n} c</u>i c<u>j k(x</u>i, x_j) ge 0.
+\(\)
+</p>
+</li>
+</ul>
+<ul>
+<li><p><b></b>Uniqueness:<b></b> Every RKHS has a unique reproducing kernel.
+</p>
+</li>
+<li><p><b></b>Existence:<b></b> Conversely, every positive-definite kernel corresponds to a unique RKHS.
+</p>
+</li>
+</ul>
+<h2>Examples of Kernels</h2>
+<p>1. <b></b>Linear kernel:<b></b> \(k(x, y) = \langle x, y \rangle\)  
+The corresponding RKHS is the space of linear functions.
+</p>
+<p>2. <b></b>Polynomial kernel:<b></b> \(k(x, y) = (\langle x, y \rangle + c)^d\)  
+The RKHS consists of all polynomials up to degree \(d\).
+</p>
+<p>3. <b></b>Gaussian (RBF) kernel:<b></b> 
+\(\)
+k(x, y) = exp!left(-frac{|x - y|^2}{2sigma^2}right)
+\(\)
+This gives rise to a very smooth, infinite-dimensional RKHS used widely in machine learning and Gaussian processes.
+</p>
+<p>4. <b></b>Dirac kernel:<b></b> \(k(x, y) = \delta_{xy}\)  
+The RKHS consists of all functions on \(\mathcal{X}\) with finite support.
+</p>
+<p>5. <b></b>Exponential and Laplacian kernels:<b></b>  
+Examples include \(k(x, y) = \exp(-\|x - y\| / \sigma)\), producing less smooth function spaces.
+</p>
+<h2>Constructing an RKHS from a Kernel</h2>
+<p>Given a positive-definite kernel \(k\), we can <b>construct</b> the corresponding RKHS \(\mathcal{H}_k\) as follows:
+</p>
+<p>1. Consider the set of all finite linear combinations
+\(\)
+mathcal{H}<u>0 = left{ sum</u>{i=1}^{n} alpha<u>i k(cdot, x</u>i) : alpha<u>i in mathbb{R}, x</u>i in mathcal{X}, n in mathbb{N} right}.
+\(\)
+2. Define the inner product on \(\mathcal{H}_0\) by
+\(\)
+leftlangle sum<u>i alpha</u>i k(cdot, x<u>i), sum</u>j beta<u>j k(cdot, y</u>j) rightrangle = sum<u>{i,j} alpha</u>i beta<u>j k(x</u>i, y_j).
+\(\)
+3. Complete this space under the induced norm to obtain the Hilbert space \(\mathcal{H}_k\).
+</p>
+<p>This procedure ensures the reproducing property holds automatically.
+</p>
+<h2>The Reproducing Property in Depth</h2>
+<p>The &ldquo;reproduction&rdquo; in RKHS refers to how evaluation at a point can be realized geometrically as an inner product:
+\(\)
+f(x) = langle f, k(cdot, x) rangle_{mathcal{H}}.
+\(\)
+Intuitively, \(k(\cdot, x)\) acts like a <b>probe function</b> that extracts the value of \(f\) at \(x\). 
+</p>
+<p>This property guarantees that function evaluation is a <b>continuous linear functional</b>, meaning the act of &ldquo;plugging in&rdquo; \(x\) does not destroy smoothness or boundedness within the space.
+</p>
+<h2>Geometric Viewpoint</h2>
+<p>Each function \(f\) in the RKHS can be expressed as a limit of finite kernel expansions:
+\(\)
+f = sum<u>{i=1}^{infty} alpha</u>i k(cdot, x_i),
+\(\)
+analogous to how vectors can be expressed in a basis.  
+</p>
+<p>The kernel defines an <b>implicit feature map</b>:
+\(\)
+Phi: mathcal{X} to mathcal{H}, quad Phi(x) = k(cdot, x),
+\(\)
+so that
+\(\)
+k(x, y) = langle Phi(x), Phi(y) rangle_{mathcal{H}}.
+\(\)
+</p>
+<p>This interpretation explains the <b>kernel trick</b>: we can compute inner products in a high- or infinite-dimensional feature space without ever constructing \(\Phi\) explicitly.
+</p>
+<h2>Connection to Machine Learning</h2>
+<p>In kernel methods (e.g., Support Vector Machines, Kernel Ridge Regression, Gaussian Processes), one typically never works directly with functions in \(\mathcal{H}\), but instead uses the kernel matrix
+\(\)
+K<u>{ij} = k(x</u>i, x_j),
+\(\)
+which represents pairwise similarities between data points.
+</p>
+<p>The representer theorem states that in many optimization problems involving an RKHS norm, the optimal solution \(f^*\) lies in the span of the kernel functions centered at the data:
+\(\)
+f^*(x) = sum<u>{i=1}^{n} alpha</u>i k(x, x_i).
+\(\)
+</p>
+<p>This result is fundamental: it transforms potentially infinite-dimensional problems into finite-dimensional linear algebra.
+</p>
+<h2>Gaussian Processes and RKHS</h2>
+<p>Gaussian Processes (GPs) use kernels to define distributions over functions.  
+Given a kernel \(k\), a GP assumes that any finite set of function values has a joint Gaussian distribution with covariance matrix determined by \(k\).
+</p>
+<p>The RKHS associated with the kernel \(k\) captures the “mean-square smoothness” of functions sampled from the GP prior.  
+In fact, the RKHS norm provides a measure of how &ldquo;complex&rdquo; a function is relative to the GP — functions with small RKHS norm are more likely under the prior.
+</p>
+<h2>Examples and Exercises</h2>
+<p>1. Show that the function \(k(x, y) = 1 + xy\) defines an RKHS on \(\mathbb{R}\) consisting of all affine functions \(f(x) = a + bx\).  
+2. Verify that the Gaussian kernel is positive definite.  
+3. Compute the RKHS norm for a linear function in the linear kernel space.  
+4. Using the representer theorem, derive the form of the solution in kernel ridge regression.
+</p>
+<h2>Indefinite Kernels and Reproducing Kernel Kreĭn Spaces (RKKS)</h2>
+<p>Not all similarity functions are positive definite.  
+In some applications (e.g., certain signal processing, graph kernels, or indefinite similarity measures), one encounters <b>indefinite kernels</b> — functions for which
+\(\)
+sum<u>{i,j} c</u>i c<u>j k(x</u>i, x_j)
+\(\)
+can be negative for some coefficients \(c_i\).
+</p>
+<p>In such cases, the appropriate generalization of an RKHS is a <b></b>Reproducing Kernel Kreĭn Space (RKKS)<b></b>, where the underlying space is a <b>Kreĭn space</b> — a vector space with an inner product that is not necessarily positive definite.
+</p>
+<p>An RKKS can often be represented as a difference of two RKHSs:
+\(\)
+mathcal{K} = mathcal{H}<u>+ ominus mathcal{H}</u>-,
+\(\)
+where \(k = k_+ - k_-\) and both \(k_+\), \(k_-\) are positive-definite kernels.
+</p>
+<p>While RKKSs retain a form of the reproducing property, many geometric intuitions (like distances) must be reinterpreted carefully.  
+Nonetheless, RKKS theory provides valuable tools for working with indefinite similarities and extensions of kernel methods.
+</p>
+<h2>Summary</h2>
+<p>| Concept | Description |
+|&#8201;&mdash;&#8201;&#8201;&mdash;&#8201;&#8201;&mdash;&#8201;-|&#8201;&mdash;&#8201;&#8201;&mdash;&#8201;&#8201;&mdash;&#8201;&#8201;&mdash;&#8201;&ndash;|
+| RKHS | Hilbert space of functions with reproducing kernel property |
+| Kernel \(k(x,y)\) | Symmetric, positive-definite similarity function |
+| Evaluation | \(f(x) = \langle f, k(\cdot, x) \rangle\) |
+| Construction | Linear combinations of kernels + completion |
+| Machine learning link | Kernel trick and representer theorem |
+| Indefinite generalization | Reproducing Kernel Kreĭn Space (RKKS) |
+</p>
+<h2>Further Reading</h2>
+<ul>
+<li><p>Aronszajn, N. (1950). <b>Theory of Reproducing Kernels</b>. Transactions of the American Mathematical Society, 68(3), 337–404.
+</p>
+</li>
+<li><p>Berlinet, A. &amp; Thomas-Agnan, C. (2004). <b>Reproducing Kernel Hilbert Spaces in Probability and Statistics</b>. Springer.
+</p>
+</li>
+<li><p>Steinwart, I. &amp; Christmann, A. (2008). <b>Support Vector Machines</b>. Springer.
+</p>
+</li>
+<li><p>Schölkopf, B. &amp; Smola, A. (2002). <b>Learning with Kernels</b>. MIT Press.
+</p>
+</li>
+</ul>
+<h2>Closing Remarks</h2>
+<p>The RKHS framework elegantly merges geometry, analysis, and computation.  
+Its language enables us to describe smoothness, regularization, and similarity in a unified way.  
+Understanding RKHS deeply provides not only theoretical insight but also practical power across modern applied mathematics, data science, and machine learning.
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
